@@ -1,10 +1,13 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# Challenge of the Idol Frog
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: [Isaac Castro](https://github.com/thegta5p)
+			[Joel Muniz](https://github.com/Zarko36)
+			[Sam](https://github.com/srsmith516)
+			[Christopher Arellano](https://github.com/CaliDobie)
  
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list, start thinking about the features you will implement, what design patterns can help you implement them, and why. If you want to propose your own original idea, you will have to contact an instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). Your project needs to implement at least one design pattern iteratively, which you will have to justify in later phases.The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings. While Daily Scrums are not required we highly encourage you to practice them.
 
@@ -27,6 +30,15 @@
  > * What will be the input/output of your project? What are the features that the project provides?
  > 
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
+ Description: Why is it important or intresting to you? 
+				Dungeon and Dragons is a very interesting board game that anyone can play. However, a notice issue commonly highlighted by the community of DnD enjoyers is that the board game itself is no more then just a board game. There is no video game adaptation of the board game which leave many fans disappointed. Creating a video game based of an infamous board game would be a step in the right direction to expanding the franchise. As a result we are going to adapt the campaign Challenge of the Frog Idol into a text RPG. This is going to include a character selection, a turn-based combat, decision making, enemies with their own stats, all while adapting it to be playable as a game.
+			  What language/tools/technologies do you plan to use? The program is going to be written in C++. Some tools we are planning to use include
+				-JPG to ASCII Converter
+				-[MinGW](https://www.mingw-w64.org/)
+				-Ubuntu For Desktop
+				-Visual Studio
+			  What will be the input/output of your project? What are the features that the project provides?
+				The input is going to be the keyboard, where the user is going to be able to type a response to a prompt(Ex: Press 1 for attack). The output is going to be a terminal, where the user gets feedback from their decisions. The project is going to feature turn-based combat, decision making, player stats, enemy stats, items. More feature will be added if time allows. 
  > 
  > You also need to set up an empty project board by choosing the  “Automated kanban with review” option on Github. You should also have a Backlog and In testing columns added.
  > ## Phase II
