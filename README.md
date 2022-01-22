@@ -33,12 +33,19 @@
 
  Description: Why is it important or intresting to you? 
 Dungeon and Dragons is a very interesting board game that anyone can play. However, a notice issue commonly highlighted by the community of DnD enjoyers is that the board game itself is no more then just a board game. There is no video game adaptation of the board game which leave many fans disappointed. Creating a video game based of an infamous board game would be a step in the right direction to expanding the franchise. As a result we are going to adapt the campaign Challenge of the Frog Idol into a text RPG. This is going to include a character selection, a turn-based combat, decision making, enemies with their own stats, all while adapting it to be playable as a game.
+
 What language/tools/technologies do you plan to use? The program is going to be written in C++. Some tools we are planning to use include
-	-JPG to ASCII Converter
-	-[MinGW](https://www.mingw-w64.org/)
-	-Ubuntu For Desktop
-	-Visual Studio
+
+  * JPG to ASCII Converter
+ 
+  * [MinGW](https://www.mingw-w64.org/)
+  
+  * Ubuntu For Desktop
+  
+  * Visual Studio
+	
 What will be the input/output of your project? What are the features that the project provides?
+
 The input is going to be the keyboard, where the user is going to be able to type a response to a prompt(Ex: Press 1 for attack). The output is going to be a terminal, where the user gets feedback from their decisions. The project is going to feature turn-based combat, decision making, player stats, enemy stats, items. More feature will be added if time allows. 
 
 > 
