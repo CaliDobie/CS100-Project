@@ -20,7 +20,7 @@
  > * Each member of the group **must** be committing code regularly and make sure their code is correctly attributed to them. We will be checking attributions to determine if there was equal contribution to the project.
  > * Each member of the group must actively participate in the Github Project board and reviewing commited code.
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two scrum/check-in meetings with your lab TA/reader in two different weeks in addition to the final demo.
-hi
+
 
 ## Project Description
  > Your project description should summarize the project you are proposing. Be sure to include:
