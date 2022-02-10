@@ -66,7 +66,7 @@ The input is going to be the keyboard, where the user is going to be able to typ
  >     * How work will be divided between the team members
 
 ## Class Diagram
-![class diagram](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/uml/Project_UML_v2.drawio.png?raw=true)
+![class diagram](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/uml/v2.drawio.png?raw=true)
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
 
 Instance: This class is going to manage the saving system of the game. As soon as the player starts the game, they will be greeted with a menu and then a scene. Within the scene/menu players should be able to save the game. Each save is associated with an ID.
