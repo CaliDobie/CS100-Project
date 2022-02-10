@@ -68,6 +68,16 @@ The input is going to be the keyboard, where the user is going to be able to typ
 ## Class Diagram
 ![class diagram](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/uml/Project_UML_v2.drawio.png?raw=true)
  > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+
+Instance: This class is going to manage the saving system of the game. As soon as the player starts the game, they will be greeted with a menu and then a scene. Within the scene/menu players should be able to save the game. Each save is associated with an ID.
+
+Scene: The scene class will manage the diffrent scenes a player will encounter. Primairly they will either get a battle scene or a dialougue scene. This is determined by the state of the game, wheter they are in battle or a cutscene.
+
+Character: The character class manages all character type objects including the main character. Each character is either going to be a player, an ally, or a foe. Each character has their own unique stats.
+
+Equipment: The equipment class will manage all item types, such as potions, armor, weapons, or any other consumable items along with key items (non consumable)
+
+Menu: The menu class will contain the needed menus. This includes both a start menu and a main menu. Will also include the combat menu.
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with a reader (using Calendly). Your entire team must be present. This meeting will occur on week 8 but NOT during lab time.
