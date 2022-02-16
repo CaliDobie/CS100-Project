@@ -18,17 +18,24 @@ class Player : public Character {
         string class;
         string alignment;
     public:
-        void setName(string){}
-        void setHealth(int){}
-        void setEP(int){}
-        void setStrength(int){}
-        void setMagicPower(int){}
-        void setPhysicalDefense(int){}
-        void setMagicDefense(int){}
-        void setSpeed(int){}
-        void setClass(string){}
-        void setAlignment(string){}
-        
-        
+        void setName(string n){}
+        void setHealth(int h){}
+        void setEP(int e){}
+        void setStrength(int st){}
+        void setMagicPower(int mp){}
+        void setPhysicalDefense(int pd){}
+        void setMagicDefense(int md){}
+        void setSpeed(int sp){}
+        void setClass(string c){}
+        void setAlignment(string a){}
+        string getName(){return name;}
+        int getHealth(){return health;}
+        int getEP(){return EP;}
+        int getStrength(){return strength;}
+        int getPhysicalDefense(){return physicalDefense;}
+        int getMagicDefense(){return magicDefense;}
+        int getSpeed(){return speed;}
+        string getClass(){return class;}
+        string getAlignment(){return alignment;}
 };
 #endif //PLAYER_HPP
