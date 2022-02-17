@@ -2,6 +2,9 @@
 #include <string>
 using namespace std;
 
+#include "character.hpp"
+#include "player.hpp"
+
 int main()
 {
     string name;
@@ -26,15 +29,51 @@ int main()
     switch(choice)
     {
         case 1:
-	    //mage
-	    break;
+            /*mage*/
+            health = 100;
+            EP = ;
+            strength = ;
+            magicPower = ;
+            physicalDefense = ;
+            magicDefense = ;
+            speed = ;
+            class = "Mage";
+            alignment = "";
+            break;
         case 2:
-	    //warrior
-	    break;
+            /*warrior*/
+            health = 100;
+            EP = ;
+            strength = ;
+            magicPower = ;
+            physicalDefense = ;
+            magicDefense = ;
+            speed = ;
+            class = "Warrior";
+            alignment = "";            
+            break;
         case 3:
-	    //knight
-	    break;
+            /*knight*/
+            health = 100;
+            EP = ;
+            strength = ;
+            magicPower = ;
+            physicalDefense = ;
+            magicDefense = ;
+            speed = ;
+            class = "Knight";
+            alignment = "";            
+            break;
     }
-
+    user->setHealth(health);
+    user->setEP(EP);
+    user->setStrength(strength);
+    user->setMagicPower(magicPower);
+    user->setPhysicalDefense(physicalDefense);
+    user->setMagicDefense(magicDefense);
+    user->setSpeed(speed);
+    user->setClass(class);
+    user->setAlignment(alignment);
+    
     return 0;
 }
