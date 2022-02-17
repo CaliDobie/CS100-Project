@@ -18,16 +18,16 @@ class Player : public Character {
         string class;
         string alignment;
     public:
-        void setName(string n){}
-        void setHealth(int h){}
-        void setEP(int e){}
-        void setStrength(int st){}
-        void setMagicPower(int mp){}
-        void setPhysicalDefense(int pd){}
-        void setMagicDefense(int md){}
-        void setSpeed(int sp){}
-        void setClass(string c){}
-        void setAlignment(string a){}
+        void setName(string n){name = n;}
+        void setHealth(int h){health = h;}
+        void setEP(int e){EP = e;}
+        void setStrength(int st){strength = st;}
+        void setMagicPower(int mp){magicPower = mp;}
+        void setPhysicalDefense(int pd){physicalDefense = pd;}
+        void setMagicDefense(int md){magicDefense = md;}
+        void setSpeed(int sp){speed = sp;}
+        void setClass(string c){class = c;}
+        void setAlignment(string a){alignment = a;}
         string getName(){return name;}
         int getHealth(){return health;}
         int getEP(){return EP;}
