@@ -15,7 +15,7 @@ class Player : public Character {
         int physicalDefense;
         int magicDefense;
         int speed;
-        string class;
+        string pClass;
         string alignment;
     public:
         void setName(string n){name = n;}
@@ -26,16 +26,17 @@ class Player : public Character {
         void setPhysicalDefense(int pd){physicalDefense = pd;}
         void setMagicDefense(int md){magicDefense = md;}
         void setSpeed(int sp){speed = sp;}
-        void setClass(string c){class = c;}
+        void setClass(string c){pClass = c;}
         void setAlignment(string a){alignment = a;}
         string getName(){return name;}
         int getHealth(){return health;}
         int getEP(){return EP;}
         int getStrength(){return strength;}
+        int getMagicPower(){return magicPower;}
         int getPhysicalDefense(){return physicalDefense;}
         int getMagicDefense(){return magicDefense;}
         int getSpeed(){return speed;}
-        string getClass(){return class;}
+        string getClass(){return pClass;}
         string getAlignment(){return alignment;}
 };
 #endif //PLAYER_HPP

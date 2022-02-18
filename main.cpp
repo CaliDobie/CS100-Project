@@ -15,15 +15,17 @@ int main()
     int physicalDefense;
     int magicDefense;
     int speed;
-    string class;
+    string uClass;
     string alignment;
     
-    Character* user = new Player;
+    Player* user = new Player;
     cout << "Enter your name: ";
     cin >> name;
     user->setName(name);
     
-    cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: "
+    cout << "Welcome " << user->getName() << endl;
+    
+    cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
     int choice;
     cin >> choice;
     switch(choice)
@@ -37,7 +39,7 @@ int main()
             physicalDefense = 0;
             magicDefense = 100;
             speed = 50;
-            class = "Mage";
+            uClass = "Mage";
             alignment = "Magic";
             break;
         case 2:
@@ -49,7 +51,7 @@ int main()
             physicalDefense = 100;
             magicDefense = 0;
             speed = 25;
-            class = "Warrior";
+            uClass = "Warrior";
             alignment = "Strength";            
             break;
         case 3:
@@ -61,7 +63,7 @@ int main()
             physicalDefense = 50;
             magicDefense = 50;
             speed = 38;
-            class = "Knight";
+            uClass = "Knight";
             alignment = "Balanced";            
             break;
     }
@@ -72,8 +74,18 @@ int main()
     user->setPhysicalDefense(physicalDefense);
     user->setMagicDefense(magicDefense);
     user->setSpeed(speed);
-    user->setClass(class);
+    user->setClass(uClass);
     user->setAlignment(alignment);
+    
+    cout << "You have selected: " << user->getClass() << endl;
+    cout << "Alignment: " << user->getAlignment() << endl;
+    cout << "Health: " << user->getHealth() << endl;
+    cout << "EP: " << user->getEP() << endl;
+    cout << "Strength: " << user->getStrength() << endl;
+    cout << "Magic Power: " << user->getMagicPower() << endl;
+    cout << "Physical Defense: " << user->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << user->getMagicDefense() << endl;
+    cout << "Speed: " << user->getSpeed() << endl;
     
     return 0;
 }
