@@ -31,38 +31,38 @@ int main()
         case 1:
             /*mage*/
             health = 100;
-            EP = ;
-            strength = ;
-            magicPower = ;
-            physicalDefense = ;
-            magicDefense = ;
-            speed = ;
+            EP = 50;
+            strength = 0;
+            magicPower = 100;
+            physicalDefense = 0;
+            magicDefense = 100;
+            speed = 50;
             class = "Mage";
-            alignment = "";
+            alignment = "Magic";
             break;
         case 2:
             /*warrior*/
             health = 100;
-            EP = ;
-            strength = ;
-            magicPower = ;
-            physicalDefense = ;
-            magicDefense = ;
-            speed = ;
+            EP = 50;
+            strength = 100;
+            magicPower = 0;
+            physicalDefense = 100;
+            magicDefense = 0;
+            speed = 25;
             class = "Warrior";
-            alignment = "";            
+            alignment = "Strength";            
             break;
         case 3:
             /*knight*/
             health = 100;
-            EP = ;
-            strength = ;
-            magicPower = ;
-            physicalDefense = ;
-            magicDefense = ;
-            speed = ;
+            EP = 50;
+            strength = 50;
+            magicPower = 50;
+            physicalDefense = 50;
+            magicDefense = 50;
+            speed = 38;
             class = "Knight";
-            alignment = "";            
+            alignment = "Balanced";            
             break;
     }
     user->setHealth(health);
