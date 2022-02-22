@@ -95,6 +95,12 @@ Menu: The menu class will contain the needed menus. This includes both a start m
  > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
  > * What tasks you are planning for this next sprint.
 
+Design Pattern(s) used:
+Composite - This design pattern seems to be the best option when dealing with character creation.
+	    The reason being that the composite design pattern allows for adding aditional components in a straightforward manner.
+	    In the case of character creation all 3 character types have the same functions for the most part, which this design pattern allows for easier integration.
+	    This design pattern helped me write better code because it allowed me to define character hierarchies and create characters according to their hierarchies.
+
  
  > ## Final deliverable
  > All group members will give a demo to the TA/reader during lab time. The TA/reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
