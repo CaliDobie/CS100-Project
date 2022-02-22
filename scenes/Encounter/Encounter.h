@@ -1,0 +1,18 @@
+//
+// Created by Isaac Castro on 2/22/22.
+//
+
+#ifndef FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_ENCOUNTER_H
+#define FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_ENCOUNTER_H
+
+#include "../Scene.h"
+
+class Encounter: Scene {
+    public:
+    Encounter();
+
+
+};
+
+
+#endif //FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_ENCOUNTER_H
