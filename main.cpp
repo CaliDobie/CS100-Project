@@ -18,7 +18,7 @@ int main()
     string uClass;
     string alignment;
     
-    Player* user = new Player;
+    Character* user = new Player;
     cout << "Enter your name: ";
     cin >> name;
     user->setName(name);
