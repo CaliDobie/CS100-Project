@@ -18,6 +18,7 @@ class Player : public Character {
         string pClass;
         string alignment;
     public:
+        Player() { };
         void setName(string n){name = n;}
         void setHealth(int h){health = h;}
         void setEP(int e){EP = e;}

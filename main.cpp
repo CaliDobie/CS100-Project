@@ -4,6 +4,9 @@ using namespace std;
 
 #include "character.hpp"
 #include "player.hpp"
+#include "scenes/Scene.hpp"
+#include "scenes/Encounter/Encounter.hpp"
+#include "scenes/Encounter/Combat/Combat.hpp"
 
 int main()
 {
@@ -86,6 +89,10 @@ int main()
     cout << "Physical Defense: " << user->getPhysicalDefense() << endl;
     cout << "Magic Defense: " << user->getMagicDefense() << endl;
     cout << "Speed: " << user->getSpeed() << endl;
-    
+
+    cout << "COMBAT TUTORIAL!!!!" << endl;
+
+    Scene* combatScene = new Combat(user, 2);
+    combatScene->SetUpScene();
     return 0;
 }

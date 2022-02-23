@@ -5,13 +5,15 @@
 #ifndef FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_ENCOUNTER_H
 #define FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_ENCOUNTER_H
 
-#include "../Scene.h"
+#include "../Scene.hpp"
+#include <iostream>
+using namespace std;
 
-class Encounter: Scene {
+class Encounter: public Scene {
     public:
-    Encounter();
-
-
+    Encounter() : Scene() {
+    };
+   virtual void SetUpScene() = 0;
 };
 
 
