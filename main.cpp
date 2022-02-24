@@ -92,7 +92,7 @@ int main()
 
     cout << "COMBAT TUTORIAL!!!!" << endl;
 
-    Scene* combatScene = new Combat(user, 2);
+    Scene* combatScene = new Combat(user, 1);
     combatScene->SetUpScene();
     return 0;
 }

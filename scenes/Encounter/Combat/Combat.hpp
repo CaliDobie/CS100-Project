@@ -24,8 +24,14 @@ class Combat: public Encounter {
 public:
     Combat(Character* currPlayer, int numOfFoes);
     void DetermineTurnOrder();
+    int FindPartyMember();
+    bool FindFoes();
+    bool FindPlayer();
+    void UpdateOrder();
+    void CurrentCombat();
     virtual void SetUpScene() {
         DetermineTurnOrder();
+        CurrentCombat();
     };
 
 

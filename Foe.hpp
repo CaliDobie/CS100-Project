@@ -12,6 +12,7 @@ using namespace std;
 class Foe : public Character {
     //to be implemented just a dummy foe for now
     string name;
+    bool isPlayer = false;
     int health;
     int EP;
     int strength;
@@ -26,6 +27,7 @@ class Foe : public Character {
         name = newName;
         speed = newSpeed;
         health = newHealth;
+
     }
     virtual void setName(string newName) {
         name = newName;
@@ -46,57 +48,61 @@ class Foe : public Character {
         magicPower = newPower;
     }
 
-    void setPhysicalDefense(int pd) {
+    virtual void setPhysicalDefense(int pd) {
         physicalDefense = pd;
     }
 
-    void setMagicDefense(int md){
+    virtual void setMagicDefense(int md){
         magicDefense = md;
     }
 
-    void setSpeed(int sp){
+    virtual void setSpeed(int sp){
         speed = sp;
     }
 
-    void setClass(string c){
+    virtual void setClass(string c){
         pClass = c;
     }
 
-    void setAlignment(string a){
+    virtual void setAlignment(string a){
         alignment = a;
     }
 
-    string getName(){
+    virtual string getName(){
         return name;
     }
 
-    int getHealth(){
+    virtual int getHealth(){
         return health;
     }
 
-    int getEP(){
+    virtual int getEP(){
         return EP;
     }
-    int getStrength() {
+    virtual int getStrength() {
         return strength;
     }
-    int getMagicPower(){
+    virtual int getMagicPower(){
         return magicPower;
     }
-    int getPhysicalDefense(){
+    virtual int getPhysicalDefense(){
         return physicalDefense;
     }
-    int getMagicDefense(){
+    virtual int getMagicDefense(){
         return magicDefense;
     }
-    int getSpeed(){
+    virtual int getSpeed(){
         return speed;
     }
-    string getClass(){
+    virtual string getClass(){
         return pClass;
     }
-    string getAlignment(){
+    virtual string getAlignment(){
         return alignment;
+    }
+
+    virtual bool getType (){
+        return isPlayer;
     }
 
 };

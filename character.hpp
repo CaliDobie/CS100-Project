@@ -5,6 +5,7 @@
 using namespace std;
 class Character {
     private:
+        bool isPlayer;
         string name;
         int health;
         int EP;
@@ -37,5 +38,6 @@ class Character {
         virtual int getSpeed() = 0;
         virtual string getClass() = 0;
         virtual string getAlignment() = 0;
+        virtual bool getType() = 0;
 };
 #endif //CHARACTER_HPP

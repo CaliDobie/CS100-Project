@@ -7,6 +7,7 @@
 
 class Player : public Character {
     private:
+        bool isPlayer = true;
         string name;
         int health;
         int EP;
@@ -39,5 +40,8 @@ class Player : public Character {
         int getSpeed(){return speed;}
         string getClass(){return pClass;}
         string getAlignment(){return alignment;}
+        virtual bool getType() {
+            return isPlayer;
+        }
 };
 #endif //PLAYER_HPP
