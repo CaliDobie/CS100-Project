@@ -8,7 +8,10 @@
 
 class Scene {
     public:
-    Scene();
+    Scene() {
+
+    };
+virtual void SetUpScene() = 0;
 
 };
 
