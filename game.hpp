@@ -6,6 +6,21 @@
 #include <fstream>
 
 using namespace std;
+class game {
+	private:
+	string name;
+	double play_time;
+	int ID;
+	
+	public:
+	game(){
+		//Default Constructor Incomplete
+	}
+
+	game(int ID){
+		
+	}	
+	private:
 void write (){
 	ofstream file;
 	file.open("text.txt");
@@ -22,19 +37,28 @@ void read(){
 	}
 
 }
-
-void display_menu(){
-	cout << "
-
-
-
+	public:
+void menu(){
+	//Incomplete
 }
 
 void save(int ID){
 	ofstream save_file;
 	string file_name = "save" + to_string(ID);
 	file.open(
+}
 
+void get_name(){
+	//Incomplete
+}
+
+void set_name(string name){
+	//Incomplete
+}
+
+void display(){
+	//Incomplete
+}
 
 }
 
