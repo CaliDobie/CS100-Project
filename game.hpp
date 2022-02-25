@@ -23,4 +23,19 @@ void read(){
 
 }
 
+void display_menu(){
+	cout << "
+
+
+
+}
+
+void save(int ID){
+	ofstream save_file;
+	string file_name = "save" + to_string(ID);
+	file.open(
+
+
+}
+
 #endif //GAME_HPP
