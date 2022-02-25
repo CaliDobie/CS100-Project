@@ -37,8 +37,19 @@ void read(){
 	}
 }
 
+//Cheks if save has been created
 int is_saved(int ID){
-
+	string temp = "";
+	ifstream save_file;
+	save_file.open("save.txt");
+	int cur_line = 0;
+	while(getline(file,temp)){
+		cur_line++;
+		if(temp.find(temp, ID) != string::npos) {
+			return cur_line;		//Returns line of save if saved
+		}
+	}
+	return 0;					//Returns zero if not saved
 };
 
 void new_save(int ID, string name, double play_time ){
