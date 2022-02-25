@@ -20,7 +20,10 @@ int main(){
 		srand(time(NULL));
 		int ID = new rand() % 1000 + 1;
 		game new_game = new game(ID);
-		
+		cout <<"What is your name, hero?\n";
+		string name;
+		name = getline();
+		game.set_name(name);	
 	}
 	else if(input == 'N'){
 		//cout <<"Would you like to load an old game(Y/N)?\n";
@@ -38,13 +41,13 @@ int main(){
 	//Game Loop
 	while(!exit){
 		input = getch();
-		display_game();
+		new_game.display();
 		switch(input){
 		case m:
-			display_menu();
+			new_game.menu();
 			break;
 		case s:
-			save();
+			new_game.save();
 			cout << "Game Saved\n";
 			break;
 		case x:
@@ -57,6 +60,6 @@ int main(){
 
 	//Game Exit
 	system("cls");
-	cout << "Goodbye " << game.get_name() << "\n";
+	cout << "Goodbye " << new_game.get_name() << "\n";
 	return 0;
 }
