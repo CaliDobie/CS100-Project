@@ -6,21 +6,27 @@
 #include <fstream>
 
 using namespace std;
+
 class game {
-	private:
+	private:	//Stores Player Information
 	string name;
 	double play_time;
 	int ID;
 	
-	public:
+	public:		//Construtors
 	game(){
 		//Default Constructor Incomplete
 	}
 
 	game(int ID){
-		
+		if(is_saved(ID)){
+			update();
+		}
+		else{
+			new_save();
+		}	
 	}	
-	private:
+	private:	//Private Helper Functions
 void write (){
 	ofstream file;
 	file.open("text.txt");
@@ -52,7 +58,12 @@ int is_saved(int ID){
 	return 0;					//Returns zero if not saved
 };
 
-void new_save(int ID, string name, double play_time ){
+void new_save(){
+
+}
+
+void update(){
+
 
 }
 	public:
