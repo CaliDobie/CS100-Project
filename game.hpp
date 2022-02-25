@@ -35,6 +35,13 @@ void read(){
 	while(getline(file,temp)){
 		cout << s << endl;
 	}
+}
+
+int is_saved(int ID){
+
+};
+
+void new_save(int ID, string name, double play_time ){
 
 }
 	public:
