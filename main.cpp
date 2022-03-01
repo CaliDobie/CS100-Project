@@ -158,6 +158,16 @@ int main()
     ally_npc->setPhysicalDefense(aphysicalDefense);
     ally_npc->setMagicDefense(amagicDefense);
     ally_npc->setSpeed(aspeed);
-       
+
+    cout << "Your Ally:" << endl;
+    cout << "Name: " << ally_npc->getName() << endl;
+    cout << "Health: " << ally_npc->getHealth() << endl;
+    cout << "EP: " << ally_npc->getEP() << endl;
+    cout << "Strength: " << ally_npc->getStrength() << endl;
+    cout << "Magic Power: " << ally_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << ally_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << ally_npc->getMagicDefense() << endl;
+    cout << "Speed: " << ally_npc->getSpeed() << endl;
+
     return 0;
 }
