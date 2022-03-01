@@ -7,6 +7,7 @@ using namespace std;
 
 int main()
 {
+    /*user*/
     string name;
     int health;
     int EP;
@@ -17,6 +18,26 @@ int main()
     int speed;
     string uClass;
     string alignment;
+
+    /*foe*/
+    string fname;
+    int fhealth;
+    int fEP;
+    int fstrength;
+    int fmagicPower;
+    int fphysicalDefense;
+    int fmagicDefense;
+    int fspeed;
+
+    /*ally*/
+    string aname;
+    int ahealth;
+    int aEP;
+    int astrength;
+    int amagicPower;
+    int aphysicalDefense;
+    int amagicDefense;
+    int aspeed;
     
     Character* user = new Player;
     cout << "Enter your name: ";
