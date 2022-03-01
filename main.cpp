@@ -4,6 +4,9 @@ using namespace std;
 
 #include "character.hpp"
 #include "player.hpp"
+#include "npc.hpp"
+#include "foe.hpp"
+#include "ally.hpp"
 
 int main()
 {
@@ -108,5 +111,53 @@ int main()
     cout << "Magic Defense: " << user->getMagicDefense() << endl;
     cout << "Speed: " << user->getSpeed() << endl;
     
+    NPC* ally_npc = new Ally;
+    
+    switch(choice)
+    {
+        case 1:
+            /*mage ally*/
+            aname = "Warrior(Ally)";
+            ahealth = 100;
+            aEP = 50;
+            astrength = 100;
+            amagicPower = 0;
+            aphysicalDefense = 100;
+            amagicDefense = 0;
+            aspeed = 25;
+            break;
+        case 2:
+            /*warrior ally*/
+            aname = "Mage(Ally)";
+            ahealth = 100;
+            aEP = 50;
+            astrength = 0;
+            amagicPower = 100;
+            aphysicalDefense = 0;
+            amagicDefense = 100;
+            aspeed = 50;
+            break;
+        case 3:
+            /*knight ally*/
+            aname = "Knight(Ally)";
+            ahealth = 100;
+            aEP = 50;
+            astrength = 50;
+            amagicPower = 50;
+            aphysicalDefense = 50;
+            amagicDefense = 50;
+            aspeed = 38;
+            break;
+    }
+    
+    ally_npc->setName(aname);
+    ally_npc->setHealth(ahealth);
+    ally_npc->setEP(aEP);
+    ally_npc->setStrength(astrength);
+    ally_npc->setMagicPower(amagicPower);
+    ally_npc->setPhysicalDefense(aphysicalDefense);
+    ally_npc->setMagicDefense(amagicDefense);
+    ally_npc->setSpeed(aspeed);
+       
     return 0;
 }
