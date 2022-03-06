@@ -379,5 +379,109 @@ int main()
     foe_10_npc->setMagicDefense(fmagicDefense);
     foe_10_npc->setSpeed(fspeed);
 
+    /*foe stat check*/
+    cout << endl << endl << endl;
+    cout << "Foe Stats:" << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_1_npc->getName() << endl;
+    cout << "Health: " << foe_1_npc->getHealth() << endl;
+    cout << "EP: " << foe_1_npc->getEP() << endl;
+    cout << "Strength: " << foe_1_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_1_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_1_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_1_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_1_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_2_npc->getName() << endl;
+    cout << "Health: " << foe_2_npc->getHealth() << endl;
+    cout << "EP: " << foe_2_npc->getEP() << endl;
+    cout << "Strength: " << foe_2_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_2_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_2_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_2_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_2_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_3_npc->getName() << endl;
+    cout << "Health: " << foe_3_npc->getHealth() << endl;
+    cout << "EP: " << foe_3_npc->getEP() << endl;
+    cout << "Strength: " << foe_3_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_3_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_3_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_3_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_3_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_4_npc->getName() << endl;
+    cout << "Health: " << foe_4_npc->getHealth() << endl;
+    cout << "EP: " << foe_4_npc->getEP() << endl;
+    cout << "Strength: " << foe_4_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_4_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_4_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_4_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_4_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_5_npc->getName() << endl;
+    cout << "Health: " << foe_5_npc->getHealth() << endl;
+    cout << "EP: " << foe_5_npc->getEP() << endl;
+    cout << "Strength: " << foe_5_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_5_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_5_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_5_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_5_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_6_npc->getName() << endl;
+    cout << "Health: " << foe_6_npc->getHealth() << endl;
+    cout << "EP: " << foe_6_npc->getEP() << endl;
+    cout << "Strength: " << foe_6_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_6_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_6_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_6_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_6_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_7_npc->getName() << endl;
+    cout << "Health: " << foe_7_npc->getHealth() << endl;
+    cout << "EP: " << foe_7_npc->getEP() << endl;
+    cout << "Strength: " << foe_7_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_7_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_7_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_7_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_7_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_8_npc->getName() << endl;
+    cout << "Health: " << foe_8_npc->getHealth() << endl;
+    cout << "EP: " << foe_8_npc->getEP() << endl;
+    cout << "Strength: " << foe_8_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_8_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_8_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_8_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_8_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_9_npc->getName() << endl;
+    cout << "Health: " << foe_9_npc->getHealth() << endl;
+    cout << "EP: " << foe_9_npc->getEP() << endl;
+    cout << "Strength: " << foe_9_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_9_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_9_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_9_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_9_npc->getSpeed() << endl;
+    
+    cout << endl;
+    cout << "Name: " << foe_10_npc->getName() << endl;
+    cout << "Health: " << foe_10_npc->getHealth() << endl;
+    cout << "EP: " << foe_10_npc->getEP() << endl;
+    cout << "Strength: " << foe_10_npc->getStrength() << endl;
+    cout << "Magic Power: " << foe_10_npc->getMagicPower() << endl;
+    cout << "Physical Defense: " << foe_10_npc->getPhysicalDefense() << endl;
+    cout << "Magic Defense: " << foe_10_npc->getMagicDefense() << endl;
+    cout << "Speed: " << foe_10_npc->getSpeed() << endl;
+
     return 0;
 }
