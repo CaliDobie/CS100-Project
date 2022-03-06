@@ -189,5 +189,195 @@ int main()
     NPC* foe_9_npc = new Foe;
     NPC* foe_10_npc = new Foe;
 
+    /*foe1*/
+    fname = "Foe_1";
+    fhealth = 100;
+    fEP = 25;
+    fstrength = 25;
+    fmagicPower = 25;
+    fphysicalDefense = 25;
+    fmagicDefense = 25;
+    fspeed = 25;
+    
+    foe_1_npc->setName(fname);
+    foe_1_npc->setHealth(fhealth);
+    foe_1_npc->setEP(fEP);
+    foe_1_npc->setStrength(fstrength);
+    foe_1_npc->setMagicPower(fmagicPower);
+    foe_1_npc->setPhysicalDefense(fphysicalDefense);
+    foe_1_npc->setMagicDefense(fmagicDefense);
+    foe_1_npc->setSpeed(fspeed);
+    
+    /*foe2*/
+    fname = "Foe_2";
+    fhealth = 120;
+    fEP = 27;
+    fstrength = 27;
+    fmagicPower = 27;
+    fphysicalDefense = 27;
+    fmagicDefense = 27;
+    fspeed = 27;
+    
+    foe_2_npc->setName(fname);
+    foe_2_npc->setHealth(fhealth);
+    foe_2_npc->setEP(fEP);
+    foe_2_npc->setStrength(fstrength);
+    foe_2_npc->setMagicPower(fmagicPower);
+    foe_2_npc->setPhysicalDefense(fphysicalDefense);
+    foe_2_npc->setMagicDefense(fmagicDefense);
+    foe_2_npc->setSpeed(fspeed);
+    
+    /*foe3*/
+    fname = "Foe_3";
+    fhealth = 140;
+    fEP = 29;
+    fstrength = 29;
+    fmagicPower = 29;
+    fphysicalDefense = 29;
+    fmagicDefense = 29;
+    fspeed = 29;
+    
+    foe_3_npc->setName(fname);
+    foe_3_npc->setHealth(fhealth);
+    foe_3_npc->setEP(fEP);
+    foe_3_npc->setStrength(fstrength);
+    foe_3_npc->setMagicPower(fmagicPower);
+    foe_3_npc->setPhysicalDefense(fphysicalDefense);
+    foe_3_npc->setMagicDefense(fmagicDefense);
+    foe_3_npc->setSpeed(fspeed);
+    
+    /*foe4*/
+    fname = "Foe_4";
+    fhealth = 160;
+    fEP = 31;
+    fstrength = 31;
+    fmagicPower = 31;
+    fphysicalDefense = 31;
+    fmagicDefense = 31;
+    fspeed = 31;
+    
+    foe_4_npc->setName(fname);
+    foe_4_npc->setHealth(fhealth);
+    foe_4_npc->setEP(fEP);
+    foe_4_npc->setStrength(fstrength);
+    foe_4_npc->setMagicPower(fmagicPower);
+    foe_4_npc->setPhysicalDefense(fphysicalDefense);
+    foe_4_npc->setMagicDefense(fmagicDefense);
+    foe_4_npc->setSpeed(fspeed);
+    
+    /*foe5*/
+    fname = "Foe_5";
+    fhealth = 180;
+    fEP = 33;
+    fstrength = 33;
+    fmagicPower = 33;
+    fphysicalDefense = 33;
+    fmagicDefense = 33;
+    fspeed = 33;
+    
+    foe_5_npc->setName(fname);
+    foe_5_npc->setHealth(fhealth);
+    foe_5_npc->setEP(fEP);
+    foe_5_npc->setStrength(fstrength);
+    foe_5_npc->setMagicPower(fmagicPower);
+    foe_5_npc->setPhysicalDefense(fphysicalDefense);
+    foe_5_npc->setMagicDefense(fmagicDefense);
+    foe_5_npc->setSpeed(fspeed);
+    
+    /*foe6*/
+    fname = "Foe_6";
+    fhealth = 200;
+    fEP = 35;
+    fstrength = 35;
+    fmagicPower = 35;
+    fphysicalDefense = 35;
+    fmagicDefense = 35;
+    fspeed = 35;
+    
+    foe_6_npc->setName(fname);
+    foe_6_npc->setHealth(fhealth);
+    foe_6_npc->setEP(fEP);
+    foe_6_npc->setStrength(fstrength);
+    foe_6_npc->setMagicPower(fmagicPower);
+    foe_6_npc->setPhysicalDefense(fphysicalDefense);
+    foe_6_npc->setMagicDefense(fmagicDefense);
+    foe_6_npc->setSpeed(fspeed);
+    
+    /*foe7*/
+    fname = "Foe_7";
+    fhealth = 220;
+    fEP = 33;
+    fstrength = 33;
+    fmagicPower = 33;
+    fphysicalDefense = 33;
+    fmagicDefense = 33;
+    fspeed = 33;
+    
+    foe_7_npc->setName(fname);
+    foe_7_npc->setHealth(fhealth);
+    foe_7_npc->setEP(fEP);
+    foe_7_npc->setStrength(fstrength);
+    foe_7_npc->setMagicPower(fmagicPower);
+    foe_7_npc->setPhysicalDefense(fphysicalDefense);
+    foe_7_npc->setMagicDefense(fmagicDefense);
+    foe_7_npc->setSpeed(fspeed);
+    
+    /*foe8*/
+    fname = "Foe_8";
+    fhealth = 240;
+    fEP = 31;
+    fstrength = 31;
+    fmagicPower = 31;
+    fphysicalDefense = 31;
+    fmagicDefense = 31;
+    fspeed = 31;
+    
+    foe_8_npc->setName(fname);
+    foe_8_npc->setHealth(fhealth);
+    foe_8_npc->setEP(fEP);
+    foe_8_npc->setStrength(fstrength);
+    foe_8_npc->setMagicPower(fmagicPower);
+    foe_8_npc->setPhysicalDefense(fphysicalDefense);
+    foe_8_npc->setMagicDefense(fmagicDefense);
+    foe_8_npc->setSpeed(fspeed);
+    
+    /*foe9*/
+    fname = "Foe_9";
+    fhealth = 260;
+    fEP = 29;
+    fstrength = 29;
+    fmagicPower = 29;
+    fphysicalDefense = 29;
+    fmagicDefense = 29;
+    fspeed = 29;
+    
+    foe_9_npc->setName(fname);
+    foe_9_npc->setHealth(fhealth);
+    foe_9_npc->setEP(fEP);
+    foe_9_npc->setStrength(fstrength);
+    foe_9_npc->setMagicPower(fmagicPower);
+    foe_9_npc->setPhysicalDefense(fphysicalDefense);
+    foe_9_npc->setMagicDefense(fmagicDefense);
+    foe_9_npc->setSpeed(fspeed);
+    
+    /*foe10*/
+    fname = "Foe_10";
+    fhealth = 200;
+    fEP = 25;
+    fstrength = 25;
+    fmagicPower = 25;
+    fphysicalDefense = 25;
+    fmagicDefense = 25;
+    fspeed = 25;
+    
+    foe_10_npc->setName(fname);
+    foe_10_npc->setHealth(fhealth);
+    foe_10_npc->setEP(fEP);
+    foe_10_npc->setStrength(fstrength);
+    foe_10_npc->setMagicPower(fmagicPower);
+    foe_10_npc->setPhysicalDefense(fphysicalDefense);
+    foe_10_npc->setMagicDefense(fmagicDefense);
+    foe_10_npc->setSpeed(fspeed);
+
     return 0;
 }
