@@ -46,6 +46,7 @@ int main()
     cout << "Enter your name: ";
     cin >> name;
     user->setName(name);
+<<<<<<< HEAD
 
     cout << endl; 
    
@@ -53,6 +54,15 @@ int main()
 
     cout << endl;    
 
+=======
+    
+    cout << endl;
+    
+    cout << "Welcome " << user->getName() << endl;
+    
+    cout << endl;
+    
+>>>>>>> 9d4b8cdc8d087a84d6551ed8312ebefa07b9906d
     cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
     int choice;
     cin >> choice;
@@ -104,9 +114,15 @@ int main()
     user->setSpeed(speed);
     user->setClass(uClass);
     user->setAlignment(alignment);
+<<<<<<< HEAD
 
     cout << endl;    
 
+=======
+    
+    cout << endl;
+    
+>>>>>>> 9d4b8cdc8d087a84d6551ed8312ebefa07b9906d
     cout << "You have selected: " << user->getClass() << endl;
     cout << "Alignment: " << user->getAlignment() << endl;
     cout << "Health: " << user->getHealth() << endl;
@@ -164,6 +180,8 @@ int main()
     ally_npc->setPhysicalDefense(aphysicalDefense);
     ally_npc->setMagicDefense(amagicDefense);
     ally_npc->setSpeed(aspeed);
+    
+    cout << endl;
 
     cout << endl;
 
