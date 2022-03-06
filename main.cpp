@@ -380,6 +380,7 @@ int main()
     foe_10_npc->setSpeed(fspeed);
 
     /*foe stat check*/
+    /*
     cout << endl << endl << endl;
     cout << "Foe Stats:" << endl;
     
@@ -482,6 +483,7 @@ int main()
     cout << "Physical Defense: " << foe_10_npc->getPhysicalDefense() << endl;
     cout << "Magic Defense: " << foe_10_npc->getMagicDefense() << endl;
     cout << "Speed: " << foe_10_npc->getSpeed() << endl;
+    */
 
     return 0;
 }
