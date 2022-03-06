@@ -46,9 +46,13 @@ int main()
     cout << "Enter your name: ";
     cin >> name;
     user->setName(name);
-    
+
+    cout << endl; 
+   
     cout << "Welcome " << user->getName() << endl;
-    
+
+    cout << endl;    
+
     cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
     int choice;
     cin >> choice;
@@ -100,7 +104,9 @@ int main()
     user->setSpeed(speed);
     user->setClass(uClass);
     user->setAlignment(alignment);
-    
+
+    cout << endl;    
+
     cout << "You have selected: " << user->getClass() << endl;
     cout << "Alignment: " << user->getAlignment() << endl;
     cout << "Health: " << user->getHealth() << endl;
@@ -159,6 +165,8 @@ int main()
     ally_npc->setMagicDefense(amagicDefense);
     ally_npc->setSpeed(aspeed);
 
+    cout << endl;
+
     cout << "Your Ally:" << endl;
     cout << "Name: " << ally_npc->getName() << endl;
     cout << "Health: " << ally_npc->getHealth() << endl;
@@ -168,6 +176,18 @@ int main()
     cout << "Physical Defense: " << ally_npc->getPhysicalDefense() << endl;
     cout << "Magic Defense: " << ally_npc->getMagicDefense() << endl;
     cout << "Speed: " << ally_npc->getSpeed() << endl;
+
+    /*created 10 foes*/
+    NPC* foe_1_npc = new Foe;
+    NPC* foe_2_npc = new Foe;
+    NPC* foe_3_npc = new Foe;
+    NPC* foe_4_npc = new Foe;
+    NPC* foe_5_npc = new Foe;
+    NPC* foe_6_npc = new Foe;
+    NPC* foe_7_npc = new Foe;
+    NPC* foe_8_npc = new Foe;
+    NPC* foe_9_npc = new Foe;
+    NPC* foe_10_npc = new Foe;
 
     return 0;
 }
