@@ -15,6 +15,8 @@ using namespace std;
 class Combat: public Encounter {
     int combatState = 0;
     int foes = 0;
+    int prevDefense;
+    bool isGaurd = false;
     vector<Character*> turnOrder;
     Character* player;
     Character* foe1;

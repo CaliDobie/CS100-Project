@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <stdlib.h>
 #include "Combat.hpp"
 #include "../../Foe.hpp"
 #include <algorithm>
@@ -18,7 +19,7 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     foes = numOfFoes;
     switch (numOfFoes) {
         case 1:
-            foe1 = new Foe("mon1", 10, 20);
+            foe1 = new Foe("mon1", 60, 20);
             turnOrder.push_back(foe1);
         break;
 
@@ -60,11 +61,12 @@ void Combat::CurrentCombat() {
     int phase = 1;
     int turnCounter = 0;
     int newHealth;
-    int decision;
+    char decision;
     int totalDamage;
     int playerLocation = FindPartyMember();
     int foeNum;
     Character* tempChar;
+    system("clear");
     cout << "Phase " << phase << endl;
     if (turnOrder.at(0)->getType()) {
         foeNum = 1;
@@ -77,11 +79,33 @@ void Combat::CurrentCombat() {
     while(combatState != 3 && combatState!=4) {
         if (combatState == 0) {
 
+            tempChar = turnOrder.at(playerLocation);
+
+            totalDamage = turnOrder.at(foeNum)->getStrength() + turnOrder.at(foeNum)->getMagicPower();
+            totalDamage /=2;
+            int defenseOffeset = (tempChar->getMagicDefense() + tempChar->getPhysicalDefense())/2;
+            totalDamage = totalDamage - defenseOffeset;
+            if(totalDamage < 0) {
+                totalDamage = 0;
+            }
+            newHealth = tempChar->getHealth() - totalDamage;
+            cout << tempChar->getHealth() << "-" << totalDamage << endl;
+            tempChar->setHealth(newHealth);
+            cout << "Your Health:" << tempChar->getHealth() << endl;
+            turnOrder.at(playerLocation) = tempChar;
+            combatState = 1;
+
         } else if (combatState == 1) {
             cout << "1. Attack 2. Spell 3. "
                     "Item 4. Guard Any Key: Pass Turn" << endl;
             cin >> decision;
-            if(decision == 1) {
+            cin.clear();
+            if(decision == '1') {
+
+                if(isGaurd) {
+                    isGaurd = false;
+                    player->setPhysicalDefense(prevDefense);
+                }
 
                 totalDamage = player->getMagicPower() + player->getStrength();
                 totalDamage /= 2;
@@ -95,18 +119,23 @@ void Combat::CurrentCombat() {
 
                 combatState = 0;
             }
-        }
-        else if (combatState == 1) {
-            tempChar = turnOrder.at(playerLocation);
-
-            totalDamage = turnOrder.at(foeNum)->getStrength() + turnOrder.at(foeNum)->getMagicPower();
-            totalDamage /=2;
-            int defenseOffeset = (tempChar->getMagicDefense() + tempChar->getPhysicalDefense())/2;
-            totalDamage = totalDamage - defenseOffeset;
-            newHealth = tempChar->getHealth() - totalDamage;
-            turnOrder.at(playerLocation) = tempChar;
-
-            combatState  = 1;
+            else if (decision == '2') {
+                cout << "To be implemented" << endl;
+                combatState = 0;
+            }
+            else if (decision == '3') {
+                cout << "To be implemented" << endl;
+                combatState = 0;
+            }
+            else if (decision = '4') {
+                prevDefense = player->getPhysicalDefense();
+                player->setPhysicalDefense(prevDefense += 10);
+                isGaurd = true;
+                combatState = 0;
+            }
+            else {
+                combatState = 0;
+            }
         }
 
         if(turnOrder.at(foeNum)->getHealth() <= 0) {
@@ -153,11 +182,14 @@ int Combat::FindPartyMember() {
 }
 
 bool Combat::FindFoes() {
+
+    bool founded = false;
     for(int i = 0; i < turnOrder.size(); i++) {
         if(!turnOrder.at(i)->getType()) {
-            return true;
+            founded = true;
+            break;
         }
     }
 
-    return false;
+    return founded;
 }
