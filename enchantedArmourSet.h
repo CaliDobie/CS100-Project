@@ -1,14 +1,14 @@
-#ifndef _HEALTH_POTION_H_
-#define _HEALTH_POTION_H_
-#include "consumables.h"
+#ifndef _ENCHANTED_ARMOUR_SET_H_
+#define _ENCHANTED_ARMOUR_SET_H_
+#include "weaponary.h"
 #include "Character.h"
 #include "Player.h"
 #include <string>
 #include <vector>
 
 using namespace std;
-//category 1
-class healthPotion : public consumables {
+//category 4
+class enchantedArmourSet : public weaponary {
 
 private:
 
@@ -18,7 +18,7 @@ private:
 
 public:
 
-	healthPotion(string name, int category, int effect) : consumables() {
+	enchantedArmourSet(string name, int category, int effect) : weaponary() {
 		setName(name);
 		setCategory(category);
 		setEffect(effect);
@@ -41,13 +41,14 @@ public:
 	virtual void setEffect(int newEffect) {
 		effect = newEffect;
 	}
+	
 	virtual void doEffect(Character* player) {
 
-		int temp = player->getHealth();
+		int temp = player->getMagicDefense();
 		temp += effect;
-		player->setHealth(temp);
+		player->setMagicDefense(temp);
 
 	}
-
+	
 };
 #endif

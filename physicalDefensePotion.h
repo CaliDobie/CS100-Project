@@ -1,5 +1,5 @@
-#ifndef _HEALTH_POTION_H_
-#define _HEALTH_POTION_H_
+#ifndef _PHYSICAL_DEFENSE_POTION_H_
+#define _PHYSICAL_DEFENSE_POTION_H_
 #include "consumables.h"
 #include "Character.h"
 #include "Player.h"
@@ -7,8 +7,8 @@
 #include <vector>
 
 using namespace std;
-//category 1
-class healthPotion : public consumables {
+//category 4
+class physicalDefensePotion : public consumables {
 
 private:
 
@@ -18,7 +18,7 @@ private:
 
 public:
 
-	healthPotion(string name, int category, int effect) : consumables() {
+	physicalDefensePotion(string name, int category, int effect) : consumables() {
 		setName(name);
 		setCategory(category);
 		setEffect(effect);
@@ -42,12 +42,12 @@ public:
 		effect = newEffect;
 	}
 	virtual void doEffect(Character* player) {
-
-		int temp = player->getHealth();
+	
+		int temp = player->getPhysicalDefense();
 		temp += effect;
-		player->setHealth(temp);
+		player->setPhysicalDefense(temp);
+			
 
 	}
-
 };
 #endif

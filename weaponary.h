@@ -1,6 +1,7 @@
-#ifndef _ITEMS_H_
-#define _ITEMS_H_
+#ifndef _WEAPONARY_H_
+#define _WEAPONARY_H_
 
+#include "items.h"
 #include "Character.h"
 #include "Player.h"
 #include <string>
@@ -8,7 +9,7 @@
 
 using namespace std;
 
-class items {
+class weaponary : public items {
 
 private:
 
@@ -18,7 +19,7 @@ private:
 
 public:
 
-    items() {};
+    weaponary() : items() {};
     virtual string getName() = 0;
     virtual void setName(string newName) = 0;
     virtual int getCategory() = 0;
@@ -29,4 +30,5 @@ public:
 
 };
 #endif
+
 

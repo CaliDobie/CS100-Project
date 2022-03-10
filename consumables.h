@@ -2,6 +2,8 @@
 #define _CONSUMABLES_H_
 
 #include "items.h"
+#include "Character.h"
+#include "Player.h"
 #include <string>
 #include <vector>
 
@@ -24,6 +26,7 @@ public:
     virtual void setCategory(int newCategory) = 0;
     virtual int getEffect() = 0;
     virtual void setEffect(int newEffect) = 0;
+    virtual void doEffect(Character* player) = 0;
 
 };
 #endif
