@@ -115,5 +115,6 @@ Composite - This design pattern seems to be the best option when dealing with ch
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
+ Character Creation Testing: Testing for character creation has been done by creating characters in terminal and checking for correct stat values, names, etc.
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
