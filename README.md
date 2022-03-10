@@ -111,6 +111,7 @@ Composite - This design pattern seems to be the best option when dealing with ch
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+ ![screenshot1](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/Player_Character_Creation_and_Class_Selection_and_Ally_Creation.png)
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
