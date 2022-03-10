@@ -20,7 +20,7 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     foes = numOfFoes;
     switch (numOfFoes) {
         case 1:
-            foe1 = new foe;
+            foe1 = new Foe;
             foe1->setName("mon1");
             foe1->setHealth(60);
             foe1->setStrength(20);
@@ -29,15 +29,30 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
         break;
 
         case 2:
-            foe1 = new foe("mon1", 10, 20);
-            foe2 = new foe("mon2", 10, 20 );
+            foe1 = new Foe;
+            foe2 = new Foe;
+            foe1->setName("mon1");
+            foe1->setHealth(10);
+            foe1->setStrength(20);
+            foe2->setName("mon2");
+            foe2->setHealth(10);
+            foe2->setStrength(20);
             turnOrder.push_back(foe1);
             turnOrder.push_back(foe2);
             break;
         case 3:
-            foe1 = new foe("mon1", 10, 20);
-            foe2 = new foe("mon2", 10, 20);
-            foe3 = new foe("mon3", 10, 20);
+            foe1 = new Foe;
+            foe2 = new Foe;
+            foe3 = new Foe;
+            foe1->setName("mon1");
+            foe1->setHealth(10);
+            foe1->setStrength(20);
+            foe2->setName("mon2");
+            foe2->setHealth(10);
+            foe2->setStrength(20);
+            foe3->setName("mon3");
+            foe3->setHealth(10);
+            foe3->setHealth(20);
             turnOrder.push_back(foe1);
             turnOrder.push_back(foe2);
             turnOrder.push_back(foe3);
@@ -120,6 +135,7 @@ void Combat::CurrentCombat() {
             combatState = 1;
 
         } else if (combatState == 1) {
+            cout << "Enemy Health " << turnOrder.at(foeNum)->getName() << ":" << turnOrder.at(foeNum)->getHealth() << endl;
             cout << "1. Attack 2. Spell 3. "
                     "Switch 4. Guard Any Key: Pass Turn" << endl;
             cin >> decision;
@@ -140,7 +156,7 @@ void Combat::CurrentCombat() {
 
                 tempChar->setHealth(newHealth);
                 turnOrder.at(foeNum) = tempChar;
-
+                cout << turnOrder.at(foeNum)->getName() << ":" << turnOrder.at(foeNum)->getHealth() << endl;
                 combatState = 0;
             }
             else if (decision == '2') {

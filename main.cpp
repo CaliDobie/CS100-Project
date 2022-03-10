@@ -189,16 +189,16 @@ int main()
     cout << "Speed: " << ally_npc->getSpeed() << endl;
 
     /*created 10 foes*/
-    Character* foe_1_npc = new foe;
-    Character* foe_2_npc = new foe;
-    Character* foe_3_npc = new foe;
-    Character* foe_4_npc = new foe;
-    Character* foe_5_npc = new foe;
-    Character* foe_6_npc = new foe;
-    Character* foe_7_npc = new foe;
-    Character* foe_8_npc = new foe;
-    Character* foe_9_npc = new foe;
-    Character* foe_10_npc = new foe;
+    Character* foe_1_npc = new Foe;
+    Character* foe_2_npc = new Foe;
+    Character* foe_3_npc = new Foe;
+    Character* foe_4_npc = new Foe;
+    Character* foe_5_npc = new Foe;
+    Character* foe_6_npc = new Foe;
+    Character* foe_7_npc = new Foe;
+    Character* foe_8_npc = new Foe;
+    Character* foe_9_npc = new Foe;
+    Character* foe_10_npc = new Foe;
 
     /*foe1*/
     fname = "Foe_1";
@@ -389,7 +389,7 @@ int main()
     foe_10_npc->setPhysicalDefense(fphysicalDefense);
     foe_10_npc->setMagicDefense(fmagicDefense);
     foe_10_npc->setSpeed(fspeed);
-/*
+
     vector<Character*> participants;
     participants.push_back(foe_1_npc);
     participants.push_back(foe_2_npc);
