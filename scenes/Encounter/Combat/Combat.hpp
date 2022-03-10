@@ -25,7 +25,7 @@ class Combat: public Encounter {
 
 public:
     Combat(Character* currPlayer, int numOfFoes);
-    //Combat(vector<Character*> combatParticipants);
+    Combat(vector<Character*> combatParticipants);
     void DetermineTurnOrder();
     int FindPartyMember();
     bool FindFoes();

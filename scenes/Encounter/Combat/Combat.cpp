@@ -46,6 +46,10 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     turnOrder.push_back(player);
 }
 
+Combat::Combat(vector<Character *> combatParticipants) : Encounter() {
+    turnOrder = combatParticipants;
+}
+
 void Combat::DetermineTurnOrder() {
     int currSpeed;
     vector<Character*> tempOrder;
