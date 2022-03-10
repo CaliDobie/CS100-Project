@@ -110,8 +110,8 @@ Composite - This design pattern seems to be the best option when dealing with ch
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- > Screenshots of the input/output after running your application
  ![screenshot1](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/Player_Character_Creation_and_Class_Selection_and_Ally_Creation.png)
+ > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
  ## Testing
