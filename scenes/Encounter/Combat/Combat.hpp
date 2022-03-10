@@ -19,13 +19,17 @@ class Combat: public Encounter {
     bool isGaurd = false;
     vector<Character*> turnOrder;
     Character* player;
+    Character* ally1;
+    Character* ally2;
+    Character* ally3;
     Character* foe1;
     Character* foe2;
     Character* foe3;
 
 public:
     Combat(Character* currPlayer, int numOfFoes);
-    Combat(vector<Character*> combatParticipants);
+    Combat(vector<Character*> combatParticipants, Character* currPlayer);
+    Combat(vector<Character*> combatParticipants, Character* currPlayer, Character* currAlly1, Character* currAlly2, Character* currAlly3);
     void DetermineTurnOrder();
     int FindPartyMember();
     bool FindFoes();

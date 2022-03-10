@@ -10,6 +10,7 @@ using namespace std;
 #include "npc.hpp"
 #include "foe.hpp"
 #include "ally.hpp"
+#include <vector>
 
 int main()
 {
@@ -186,16 +187,16 @@ int main()
     cout << "Speed: " << ally_npc->getSpeed() << endl;
 
     /*created 10 foes*/
-    NPC* foe_1_npc = new Foe;
-    NPC* foe_2_npc = new Foe;
-    NPC* foe_3_npc = new Foe;
-    NPC* foe_4_npc = new Foe;
-    NPC* foe_5_npc = new Foe;
-    NPC* foe_6_npc = new Foe;
-    NPC* foe_7_npc = new Foe;
-    NPC* foe_8_npc = new Foe;
-    NPC* foe_9_npc = new Foe;
-    NPC* foe_10_npc = new Foe;
+    Character* foe_1_npc = new Foe;
+    Character* foe_2_npc = new Foe;
+    Character* foe_3_npc = new Foe;
+    Character* foe_4_npc = new Foe;
+    Character* foe_5_npc = new Foe;
+    Character* foe_6_npc = new Foe;
+    Character* foe_7_npc = new Foe;
+    Character* foe_8_npc = new Foe;
+    Character* foe_9_npc = new Foe;
+    Character* foe_10_npc = new Foe;
 
     /*foe1*/
     fname = "Foe_1";
@@ -387,6 +388,15 @@ int main()
     foe_10_npc->setMagicDefense(fmagicDefense);
     foe_10_npc->setSpeed(fspeed);
 
+    vector<Character*> participants;
+    participants.push_back(foe_1_npc);
+    participants.push_back(foe_2_npc);
+    participants.push_back(foe_3_npc);
+    participants.push_back(foe_4_npc);
+    participants.push_back(foe_5_npc);
+
+    Scene* testCombat = new Combat(participants, user);
+    testCombat->SetUpScene();
     /*foe stat check*/
     /*
     cout << endl << endl << endl;

@@ -46,8 +46,23 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     turnOrder.push_back(player);
 }
 
-Combat::Combat(vector<Character *> combatParticipants) : Encounter() {
+Combat::Combat(vector<Character *> combatParticipants, Character* currPlayer) : Encounter() {
+    player = currPlayer;
     turnOrder = combatParticipants;
+    turnOrder.push_back(currPlayer);
+}
+
+Combat::Combat(vector<Character *> combatParticipants, Character *currPlayer, Character *currAlly1,
+               Character *currAlly2, Character *currAlly3) {
+    player = currPlayer;
+    ally1 = currAlly1;
+    ally2 = currAlly2;
+    ally3 = currAlly3;
+    turnOrder = combatParticipants;
+    combatParticipants.push_back(player);
+    combatParticipants.push_back(ally1);
+    combatParticipants.push_back(ally2);
+    combatParticipants.push_back(ally3);
 }
 
 void Combat::DetermineTurnOrder() {
@@ -106,7 +121,7 @@ void Combat::CurrentCombat() {
 
         } else if (combatState == 1) {
             cout << "1. Attack 2. Spell 3. "
-                    "Item 4. Guard Any Key: Pass Turn" << endl;
+                    "Switch 4. Guard Any Key: Pass Turn" << endl;
             cin >> decision;
             cin.clear();
             if(decision == '1') {
