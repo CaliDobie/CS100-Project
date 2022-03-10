@@ -189,16 +189,16 @@ int main()
     cout << "Speed: " << ally_npc->getSpeed() << endl;
 
     /*created 10 foes*/
-    Character* foe_1_npc = new Foe;
-    Character* foe_2_npc = new Foe;
-    Character* foe_3_npc = new Foe;
-    Character* foe_4_npc = new Foe;
-    Character* foe_5_npc = new Foe;
-    Character* foe_6_npc = new Foe;
-    Character* foe_7_npc = new Foe;
-    Character* foe_8_npc = new Foe;
-    Character* foe_9_npc = new Foe;
-    Character* foe_10_npc = new Foe;
+    Character* foe_1_npc = new foe;
+    Character* foe_2_npc = new foe;
+    Character* foe_3_npc = new foe;
+    Character* foe_4_npc = new foe;
+    Character* foe_5_npc = new foe;
+    Character* foe_6_npc = new foe;
+    Character* foe_7_npc = new foe;
+    Character* foe_8_npc = new foe;
+    Character* foe_9_npc = new foe;
+    Character* foe_10_npc = new foe;
 
     /*foe1*/
     fname = "Foe_1";
@@ -402,7 +402,7 @@ int main()
     /*foe stat check*/
     /*
     cout << endl << endl << endl;
-    cout << "Foe Stats:" << endl;
+    cout << "foe Stats:" << endl;
 
     cout << endl;
     cout << "Name: " << foe_1_npc->getName() << endl;

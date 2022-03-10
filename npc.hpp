@@ -38,5 +38,6 @@ class NPC : public Character {
         virtual int getPhysicalDefense() = 0;
         virtual int getMagicDefense() = 0;
         virtual int getSpeed() = 0;
+        virtual bool getType() = 0;
 };
 #endif //NPC_HPP

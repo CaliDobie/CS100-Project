@@ -7,7 +7,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "Combat.hpp"
-#include "../../Foe.hpp"
+#include "../../foe.hpp"
 #include <algorithm>
 #include "../Encounter.hpp"
 #include "../../../character.hpp"
@@ -20,24 +20,24 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     foes = numOfFoes;
     switch (numOfFoes) {
         case 1:
-            foe1 = new Foe;
+            foe1 = new foe;
             foe1->setName("mon1");
             foe1->setHealth(60);
             foe1->setStrength(20);
-            //foe1 = new Foe("mon1", 60, 20);
+            //foe1 = new foe("mon1", 60, 20);
             turnOrder.push_back(foe1);
         break;
 
         case 2:
-            foe1 = new Foe("mon1", 10, 20);
-            foe2 = new Foe("mon2", 10, 20 );
+            foe1 = new foe("mon1", 10, 20);
+            foe2 = new foe("mon2", 10, 20 );
             turnOrder.push_back(foe1);
             turnOrder.push_back(foe2);
             break;
         case 3:
-            foe1 = new Foe("mon1", 10, 20);
-            foe2 = new Foe("mon2", 10, 20);
-            foe3 = new Foe("mon3", 10, 20);
+            foe1 = new foe("mon1", 10, 20);
+            foe2 = new foe("mon2", 10, 20);
+            foe3 = new foe("mon3", 10, 20);
             turnOrder.push_back(foe1);
             turnOrder.push_back(foe2);
             turnOrder.push_back(foe3);
