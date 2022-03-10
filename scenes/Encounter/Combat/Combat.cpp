@@ -11,6 +11,7 @@
 #include <algorithm>
 #include "../Encounter.hpp"
 #include "../../../character.hpp"
+#include "../../npc.hpp"
 
 using namespace std;
 
@@ -19,7 +20,11 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     foes = numOfFoes;
     switch (numOfFoes) {
         case 1:
-            foe1 = new Foe("mon1", 60, 20);
+            foe1 = new Foe;
+            foe1->setName("mon1");
+            foe1->setHealth(60);
+            foe1->setStrength(20);
+            //foe1 = new Foe("mon1", 60, 20);
             turnOrder.push_back(foe1);
         break;
 
@@ -127,7 +132,7 @@ void Combat::CurrentCombat() {
                 cout << "To be implemented" << endl;
                 combatState = 0;
             }
-            else if (decision = '4') {
+            else if (decision == '4') {
                 prevDefense = player->getPhysicalDefense();
                 player->setPhysicalDefense(prevDefense += 10);
                 isGaurd = true;
