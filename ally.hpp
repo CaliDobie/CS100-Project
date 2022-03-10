@@ -7,6 +7,8 @@
 class Ally : public NPC {
     private:
         string name;
+        string alignment;
+        string pClass;
         int health;
         int EP;
         int strength;
@@ -15,21 +17,36 @@ class Ally : public NPC {
         int magicDefense;
         int speed;
     public:
-        void setName(string n){name = n;}
-        void setHealth(int h){health = h;}
-        void setEP(int e){EP = e;}
-        void setStrength(int st){strength = st;}
-        void setMagicPower(int mp){magicPower = mp;}
-        void setPhysicalDefense(int pd){physicalDefense = pd;}
-        void setMagicDefense(int md){magicDefense = md;}
-        void setSpeed(int sp){speed = sp;}
-        string getName(){return name;}
-        int getHealth(){return health;}
-        int getEP(){return EP;}
-        int getStrength(){return strength;}
-        int getMagicPower(){return magicPower;}
-        int getPhysicalDefense(){return physicalDefense;}
-        int getMagicDefense(){return magicDefense;}
-        int getSpeed(){return speed;}
+        virtual void setClass(string s) {
+            pClass = s;
+        }
+        virtual void setAlignment(string a) {
+            alignment = a;
+        }
+        virtual void setName(string n){name = n;}
+        virtual void setHealth(int h){health = h;}
+        virtual void setEP(int e){EP = e;}
+        virtual void setStrength(int st){strength = st;}
+        virtual void setMagicPower(int mp){magicPower = mp;}
+        virtual void setPhysicalDefense(int pd){physicalDefense = pd;}
+        virtual void setMagicDefense(int md){magicDefense = md;}
+        virtual void setSpeed(int sp){speed = sp;}
+        virtual string getName(){return name;}
+        virtual string getClass() {
+            return pClass;
+        }
+        virtual string getAlignment() {
+            return alignment;
+        }
+        virtual int getHealth(){return health;}
+        virtual int getEP(){return EP;}
+        virtual int getStrength(){return strength;}
+        virtual int getMagicPower(){return magicPower;}
+        virtual int getPhysicalDefense(){return physicalDefense;}
+        virtual int getMagicDefense(){return magicDefense;}
+        virtual int getSpeed(){return speed;}
+        virtual bool getType() {
+            return true;
+        }
 };
 #endif //ALLY_HPP

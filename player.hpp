@@ -1,12 +1,17 @@
 #ifndef PLAYER_HPP
 #define PLAYER_HPP
 
-#include "character.hpp"
 #include <iostream>
 #include <string>
+#include <vector>
+#include "character.hpp"
+#include "spells/Spells.hpp"
+#include "spells/PlayerSpells.hpp"
+
 
 class Player : public Character {
     private:
+        bool isPlayer = true;
         string name;
         int health;
         int EP;
@@ -17,26 +22,31 @@ class Player : public Character {
         int speed;
         string pClass;
         string alignment;
+        vector<Spells*> playerSpell;
     public:
-        void setName(string n){name = n;}
-        void setHealth(int h){health = h;}
-        void setEP(int e){EP = e;}
-        void setStrength(int st){strength = st;}
-        void setMagicPower(int mp){magicPower = mp;}
-        void setPhysicalDefense(int pd){physicalDefense = pd;}
-        void setMagicDefense(int md){magicDefense = md;}
-        void setSpeed(int sp){speed = sp;}
-        void setClass(string c){pClass = c;}
-        void setAlignment(string a){alignment = a;}
-        string getName(){return name;}
-        int getHealth(){return health;}
-        int getEP(){return EP;}
-        int getStrength(){return strength;}
-        int getMagicPower(){return magicPower;}
-        int getPhysicalDefense(){return physicalDefense;}
-        int getMagicDefense(){return magicDefense;}
-        int getSpeed(){return speed;}
-        string getClass(){return pClass;}
-        string getAlignment(){return alignment;}
+        Player() { };
+        virtual void setName(string n){name = n;}
+        virtual void setHealth(int h){health = h;}
+        virtual void setEP(int e){EP = e;}
+        virtual void setStrength(int st){strength = st;}
+        virtual void setMagicPower(int mp){magicPower = mp;}
+        virtual void setPhysicalDefense(int pd){physicalDefense = pd;}
+        virtual void setMagicDefense(int md){magicDefense = md;}
+        virtual void setSpeed(int sp){speed = sp;}
+        virtual void setClass(string c){pClass = c;}
+        virtual void setAlignment(string a){alignment = a;}
+        virtual string getName(){return name;}
+        virtual int getHealth(){return health;}
+        virtual int getEP(){return EP;}
+        virtual int getStrength(){return strength;}
+        virtual int getMagicPower(){return magicPower;}
+        virtual int getPhysicalDefense(){return physicalDefense;}
+        virtual int getMagicDefense(){return magicDefense;}
+        virtual int getSpeed(){return speed;}
+        virtual string getClass(){return pClass;}
+        virtual string getAlignment(){return alignment;}
+        virtual bool getType() {
+                return isPlayer;
+        }
 };
 #endif //PLAYER_HPP

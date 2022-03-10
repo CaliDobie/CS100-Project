@@ -1,8 +1,11 @@
 #ifndef CHARACTER_HPP
 #define CHARACTER_HPP
 
+#include <string>
+using namespace std;
 class Character {
     private:
+        bool isPlayer;
         string name;
         int health;
         int EP;
@@ -15,25 +18,26 @@ class Character {
         string alignment;
     public:
         Character() {}
-        void setName(string n){name = n;}
-        void setHealth(int h){health = h;}
-        void setEP(int e){EP = e;}
-        void setStrength(int st){strength = st;}
-        void setMagicPower(int mp){magicPower = mp;}
-        void setPhysicalDefense(int pd){physicalDefense = pd;}
-        void setMagicDefense(int md){magicDefense = md;}
-        void setSpeed(int sp){speed = sp;}
-        void setClass(string c){pClass = c;}
-        void setAlignment(string a){alignment = a;}
-        string getName(){return name;}
-        int getHealth(){return health;}
-        int getEP(){return EP;}
-        int getStrength(){return strength;}
-        int getMagicPower(){return magicPower;}
-        int getPhysicalDefense(){return physicalDefense;}
-        int getMagicDefense(){return magicDefense;}
-        int getSpeed(){return speed;}
-        string getClass(){return pClass;}
-        string getAlignment(){return alignment;}
+        virtual void setName(string n) = 0;
+        virtual void setHealth(int h) = 0;
+        virtual void setEP(int e) = 0;
+        virtual void setStrength(int st) = 0;
+        virtual void setMagicPower(int mp) = 0;
+        virtual void setPhysicalDefense(int pd) = 0;
+        virtual void setMagicDefense(int md) = 0;
+        virtual void setSpeed(int sp) = 0;
+        virtual void setClass(string c) = 0;
+        virtual void setAlignment(string a) = 0;
+        virtual string getName() = 0;
+        virtual int getHealth() = 0;
+        virtual int getEP() = 0;
+        virtual int getStrength() = 0;
+        virtual int getMagicPower() = 0;
+        virtual int getPhysicalDefense() = 0;
+        virtual int getMagicDefense() = 0;
+        virtual int getSpeed() = 0;
+        virtual string getClass() = 0;
+        virtual string getAlignment() = 0;
+        virtual bool getType() = 0;
 };
 #endif //CHARACTER_HPP
