@@ -14,7 +14,9 @@ using namespace std;
 
 int main()
 {
+
     /*user*/
+
     string name;
     int health;
     int EP;
@@ -121,12 +123,12 @@ int main()
     cout << "Magic Defense: " << user->getMagicDefense() << endl;
     cout << "Speed: " << user->getSpeed() << endl;
 
-    cout << "COMBAT TUTORIAL!!!!" << endl;
+   // cout << "COMBAT TUTORIAL!!!!" << endl;
 
-    Scene* combatScene = new Combat(user, 2);
-    combatScene->SetUpScene();
+  //  Scene* combatScene = new Combat(user, 2);
+  //  combatScene->SetUpScene();
 
-    NPC* ally_npc = new Ally;
+    Character* ally_npc = new Ally;
 
     switch(choice)
     {
@@ -387,7 +389,7 @@ int main()
     foe_10_npc->setPhysicalDefense(fphysicalDefense);
     foe_10_npc->setMagicDefense(fmagicDefense);
     foe_10_npc->setSpeed(fspeed);
-
+/*
     vector<Character*> participants;
     participants.push_back(foe_1_npc);
     participants.push_back(foe_2_npc);
@@ -502,6 +504,7 @@ int main()
     cout << "Magic Defense: " << foe_10_npc->getMagicDefense() << endl;
     cout << "Speed: " << foe_10_npc->getSpeed() << endl;
     */
+
 
     return 0;
 }
