@@ -11,10 +11,6 @@ int main(){
 
 	//Clear Screen
 	system("cls");
-
-	//Output Opening Picture & Text
-		//........{Frog}..... Challenge Of The Frog Idol ........ {Road}
-		//Incomplete
 	
 	//Game 
 	
@@ -34,7 +30,9 @@ int main(){
 	system("cls");
 	exit = false;
 	
-	int rumor = random(int,1,12);
+	  srand (time(NULL));
+
+	int rumor = new rand() % 11 + 1;
 	bool rumor_true = false;
 	if(rumor <= 10){rumor_true = true;}
 
@@ -79,13 +77,28 @@ int main(){
         system("cls");
         exit = fase;
 
-	if(choice1 == 'r'){ /*encounter:lizard Men*/ }
-	else{	/*encounter: Giant Catfish*/ }
+	vector<Character*> fight1;
+	fight1.push_back(foe_1_npc);
+	if(choice1 == 'r'){ 
+		cout <<"Crocodiles Appear From the Mire! Ready yourself!" << endl;
+		Scene* testCombat3  = new Combat(fight1, user, playerSpells);
+		testCombat3->SetUpScene();
+	}
+	vector<Character*> fight2;
+	fight2.push_back(foe_2_npc);
+	else{ cout << "A Giant Catfish leaps from the water! AHH!" <<endl
+		Scene* testCombat2 = new Combat(fight2, user, playerSpells);
+		testCombat2->SetUpScene();
+ 	 }
 	
 	cout << "That was close... let's move on down the road" << endl;
+	vector<Character*> fight3;
+	fight3.push_back(foe_3_npc);
+
 	if(!rumor_true){
 		cout <<"Up ahead you see a group of troglodytes, get ready to fight!"<<endl;
-		/*encounter: Troglodytes*/
+		Scene* testCombat4 = new Combat(fight3, user, playerSpells);
+		testCombat4->SetUpScene();
 	}
 
 	cin.clear();
@@ -128,30 +141,40 @@ int main(){
         exit = fase;
 
 	int trial1 = 0;
-
+	
+	vector<Character*> fight4;
+	fight4.push_back(foe4);
 	if(choice2 == 1){
 		cout << "The smell of this place is so strong your eyes are failing you" << endl;
 		cout << "Where am I?\n
 			A shriek lets out from the distance\n;
-		//begin combat:zombie master
+		Scene* testCombat4 = new Combat(fight4,user,playerSpells);
+		testCombat4->SetUpScene();
 		//get trial1
 	}
+        vector<Character*> fight5;
+        fight4.push_back(foe5);
 
 	else if(choice2 == 2){
 		cout << "The water becomes deeper\n
 			You are now swimming through mangroves, lillies, and something else lurks\n
 			You reach a boat made out of a giatn wicker basket\n
 			This must be it!\n;
-		//begin combat:nixies(6)
+                Scene* testCombat5 = new Combat(fight5,user,playerSpells);
+                testCombat5->SetUpScene();
 		//get trial2
 		}
+        vector<Character*> fight6;
+        fight4.push_back(foe6);
+
 	else{
 		cout << "The rain pours down relentlessly\n
 			And what's more, something bites your foot\n
 			This ground is not safe, but we must carry on\n
 			The thorns, which have already gotten to your foot, now surround you\n
 			Hacking through the thicket, you come across the creatures that gaurd this place\n;
-		//begin combat:thogrin(12)
+                Scene* testCombat4 = new Combat(fight4,user,playerSpells);
+                testCombat4->SetUpScene();
 		//get trial3
 		}
 
