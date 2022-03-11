@@ -49,6 +49,13 @@ public:
 		player->setStrength(temp);
 
 	}
-	
+
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getStrength();
+		temp -= effect;
+		player->setStrength(temp);
+	}
+
 };
 #endif

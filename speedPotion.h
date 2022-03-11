@@ -42,7 +42,7 @@ public:
 		effect = newEffect;
 	}
 
-	
+
 	virtual void doEffect(Character* player) {
 
 		int temp = player->getSpeed();
@@ -50,7 +50,13 @@ public:
 		player->setSpeed(temp);
 
 	}
-	
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getSpeed();
+		temp -= effect;
+		player->setSpeed(temp);
+	}
+
 
 };
 #endif

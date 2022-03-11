@@ -41,7 +41,7 @@ public:
 	virtual void setEffect(int newEffect) {
 		effect = newEffect;
 	}
-	
+
 	virtual void doEffect(Character* player) {
 
 		int temp = player->getMagicDefense();
@@ -49,6 +49,13 @@ public:
 		player->setMagicDefense(temp);
 
 	}
-	
+
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getMagicDefense();
+		temp -= effect;
+		player->setMagicDefense(temp);
+	}
+
 };
 #endif

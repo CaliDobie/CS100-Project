@@ -48,6 +48,12 @@ public:
 		player->setEP(temp);
 
 	}
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getEP();
+		temp -= effect;
+		player->setEP(temp);
+	}
 
 };
 #endif

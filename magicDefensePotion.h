@@ -48,6 +48,12 @@ public:
 		player->setMagicDefense(temp);
 
 	}
-	
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getMagicDefense();
+		temp -= effect;
+		player->setMagicDefense(temp);
+	}
+
 };
 #endif

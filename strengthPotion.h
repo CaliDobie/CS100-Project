@@ -41,7 +41,7 @@ public:
 	virtual void setEffect(int newEffect) {
 		effect = newEffect;
 	}
-	
+
 	virtual void doEffect(Character* player) {
 
 		int temp = player->getStrength();
@@ -49,7 +49,13 @@ public:
 		player->setStrength(temp);
 
 	}
-	
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getStrength();
+		temp -= effect;
+		player->setStrength(temp);
+	}
+
 
 };
 #endif

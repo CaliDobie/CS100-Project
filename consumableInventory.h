@@ -19,39 +19,74 @@ using namespace std;
 class consumableInventory {
 private:
 
-	int maximumSlots = 10;
+	int maximumSlots = 20;
 
 public:
 
-	vector<consumables*> consumableInventory;
-	void consumableAdd(consumables* object) {
+	vector<items*> consumableInventory;
 
-		if (consumableInventory.size() <= maximumSlots) {
+	int consumableInventorySize() {
+		return consumableInventory.size();
+	}
+	string getItemName(int i) {
+		return consumableInventory.at(i)->getName();
+	}
+
+	void consumableInventoryAdd(items* object) {
+
+		if (consumableInventory.size() <= 19) {
 			consumableInventory.push_back(object);
+			cout << "Item added into inventory" << endl;
 		}
 		else {
-			cout << "!Your inventory is full!" << endl;
+			cout << "Your inventory is full!" << endl;
 		}
-	
+
 	}
-	void consumableRemove(string name) {
+	void consumableInventoryRemove(string name) {
 
 		int flag = 0;
 
-		for (unsigned int i = 0; i <= maximumSlots; ++i && flag == 0) {
-			if (consumableInventory.at(i) = name) {
+		for (unsigned int i = 0; i < consumableInventory.size(); ++i) {
+			if ((consumableInventory.at(i)->getName()) == name && (flag == 0)) {
 				consumableInventory.erase(consumableInventory.begin() + i);
-				++flag;
+				flag = 1;
 			}
 		}
-		if(flag == 0) {
+		if (flag == 1) {
 
-			cout << "No such potion found." << endl;
+			cout << "Item removed." << endl;
 
 		}
+		else if (flag == 0) {
+			cout << "No such item found." << endl;
+		}
+
 	}
-	void consumableUse(string name) {}
+	void consumableUse(string name, Character* player) {
+
+		int flag = 0;
+
+		for (unsigned int i = 0; i < consumableInventory.size(); ++i) {
+			if ((consumableInventory.at(i)->getName()) == name && (flag == 0)) {
+				consumableInventory.at(i)->doEffect(player);
+				consumableInventory.erase(consumableInventory.begin() + i);
+				flag = 1;
+			}
+		}
+		if (flag == 1) {
+
+			cout << "Item consumed." << endl;
+
+		}
+		else if (flag == 0) {
+
+			cout << "No such item found." << endl;
+
+		}
+
+	}
 
 
 };
-#endif //_CONSUMABLE_INVENTORY_H_
+#endif //_CONSUM

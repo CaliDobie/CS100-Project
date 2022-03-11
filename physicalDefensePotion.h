@@ -42,12 +42,17 @@ public:
 		effect = newEffect;
 	}
 	virtual void doEffect(Character* player) {
-	
+
 		int temp = player->getPhysicalDefense();
 		temp += effect;
 		player->setPhysicalDefense(temp);
-			
 
+	}
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getPhysicalDefense();
+		temp -= effect;
+		player->setPhysicalDefense(temp);
 	}
 };
 #endif

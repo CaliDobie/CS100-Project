@@ -49,5 +49,12 @@ public:
 
 	}
 
+	virtual void undoEffect(Character* player) {
+
+		int temp = player->getHealth();
+		temp -= effect;
+		player->setHealth(temp);
+	}
+
 };
 #endif

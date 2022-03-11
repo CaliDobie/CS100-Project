@@ -27,6 +27,7 @@ public:
     virtual int getEffect() = 0;
     virtual void setEffect(int newEffect) = 0;
     virtual void doEffect(Character* player) = 0;
+    virtual void undoEffect(Character* player) = 0;
 
 };
 #endif
