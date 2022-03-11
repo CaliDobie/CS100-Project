@@ -586,7 +586,7 @@ int main()
         cin.clear();
         input = 0;
         system("cls");
-	exit = fase;
+	exit = false;
 
 	cout << "You leave the inn and approach a road, which forks right or left\n";
         while(!exit){
@@ -601,7 +601,7 @@ int main()
         cin.clear();
         input = 0;
         system("cls");
-        exit = fase;
+        exit = false;
 
 	vector<Character*> fight1;
 	fight1.push_back(foe_1_npc);
@@ -630,7 +630,7 @@ int main()
 	cin.clear();
         input = 0;
         system("cls");
-        exit = fase;
+        exit = false;
 
 	cout << "You come across a strange statue...it seems to speak to you, but not in words,\n
 		It seems to slip phrase directly into your mind\n
@@ -646,7 +646,7 @@ int main()
 	cin.clear();
         input = 0;
         system("cls");
-        exit = fase;
+        exit = false;
 
 	cout << "Well that was strange...Let's get out of here and see if that old frog has any truth in him
 	\n;
@@ -664,7 +664,7 @@ int main()
         cin.clear();
         input = 0;
         system("cls");
-        exit = fase;
+        exit = fasle;
 
 	int trial1 = 0;
 	
