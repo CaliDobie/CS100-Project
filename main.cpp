@@ -1,9 +1,21 @@
-#include <iostream>
-#include <string>
-using namespace std;
-
-#include "character.hpp"
-#include "player.hpp"
+#include "inventory.h"
+#include "consumableInventory.h"
+#include "items.h"
+#include "consumables.h"
+#include "weaponary.h"
+#include "healthPotion.h"
+#include "epPotion.h"
+#include "strengthPotion.h"
+#include "physicalDefensePotion.h"
+#include "magicPowerPotion.h"
+#include "magicDefensePotion.h"
+#include "speedPotion.h"
+#include "sword.h"
+#include "magicStaff.h"
+#include "armourSet.h"
+#include "enchantedArmourSet.h"
+#include "Player.h"
+#include "Character.h"
 #include "scenes/Scene.hpp"
 #include "scenes/Encounter/Encounter.hpp"
 #include "scenes/Encounter/Combat/Combat.hpp"
@@ -15,6 +27,9 @@ using namespace std;
 #include "spells/Level1MageSpell.hpp"
 #include "spells/SpellManager.hpp"
 #include <vector>
+#include <iostream>
+#include <string>
+using namespace std;
 
 int main()
 {
@@ -150,7 +165,6 @@ int main()
             aphysicalDefense = 100;
             amagicDefense = 0;
             aspeed = 25;
-
             break;
         case 2:
             /*warrior ally*/
