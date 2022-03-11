@@ -2,6 +2,7 @@
 #define CHARACTER_HPP
 
 #include <string>
+
 using namespace std;
 class Character {
     private:

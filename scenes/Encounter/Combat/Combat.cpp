@@ -15,8 +15,9 @@
 
 using namespace std;
 
-Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
+Combat::Combat(Character* currPlayer, SpellManager* player1Spell, int numOfFoes) : Encounter() {
     player = currPlayer;
+    playerSpells = player1Spell;
     foes = numOfFoes;
     switch (numOfFoes) {
         case 1:
@@ -61,18 +62,23 @@ Combat::Combat(Character* currPlayer, int numOfFoes) : Encounter() {
     turnOrder.push_back(player);
 }
 
-Combat::Combat(vector<Character *> combatParticipants, Character* currPlayer) : Encounter() {
+Combat::Combat(vector<Character *> combatParticipants, Character* currPlayer, SpellManager* player1Spell) : Encounter() {
     player = currPlayer;
+    playerSpells = player1Spell;
     turnOrder = combatParticipants;
     turnOrder.push_back(currPlayer);
 }
 
 Combat::Combat(vector<Character *> combatParticipants, Character *currPlayer, Character *currAlly1,
-               Character *currAlly2, Character *currAlly3) {
+               Character *currAlly2, Character *currAlly3, SpellManager* player1Spell, SpellManager* ally1_spell, SpellManager* ally2_spell, SpellManager* ally3_spell) : Encounter() {
     player = currPlayer;
     ally1 = currAlly1;
     ally2 = currAlly2;
     ally3 = currAlly3;
+    playerSpells = player1Spell;
+    ally1Spells = ally1_spell;
+    ally2Spells = ally2_spell;
+    ally3Spells = ally3_spell;
     turnOrder = combatParticipants;
     combatParticipants.push_back(player);
     combatParticipants.push_back(ally1);
@@ -104,6 +110,8 @@ void Combat::CurrentCombat() {
     int totalDamage;
     int playerLocation = FindPartyMember();
     int foeNum;
+    int spellChoose = 0;
+    SpellManager* tempManager = playerSpells;
     Character* tempChar;
     system("clear");
     cout << "Phase " << phase << endl;
@@ -160,7 +168,17 @@ void Combat::CurrentCombat() {
                 combatState = 0;
             }
             else if (decision == '2') {
-                cout << "To be implemented" << endl;
+                while (spellChoose <= 0 || spellChoose > tempManager->getNumOfSpells()) {
+                    cout << "Choose a spell!" << endl;
+                    tempManager->printSpells();
+                    cin >> spellChoose;
+                    cout << spellChoose << endl;
+                }
+
+                tempSpell = tempManager->chooseSpell(spellChoose);
+                tempSpell->castSpell(turnOrder.at(foeNum));
+                cout << turnOrder.at(foeNum)->getName() << ": " << turnOrder.at(foeNum)->getHealth() << endl;
+                spellChoose = 0;
                 combatState = 0;
             }
             else if (decision == '3') {
@@ -207,6 +225,8 @@ void Combat::CurrentCombat() {
                 }
             }
         }
+
+        cin.clear();
 
     }
 }

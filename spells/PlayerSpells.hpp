@@ -18,7 +18,7 @@ class PlayerSpells  : public Spells{
     virtual string getSpellName() = 0;
     virtual string getType() = 0;
     virtual string getDescription() = 0;
-    virtual void castSpell() = 0;
+    virtual void castSpell(Character* target) = 0;
 
 };
 

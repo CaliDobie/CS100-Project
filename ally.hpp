@@ -2,7 +2,9 @@
 #define ALLY_HPP
 
 #include "npc.hpp"
+#include <vector>
 #include <string>
+
 
 class Ally : public NPC {
     private:

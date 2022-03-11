@@ -5,6 +5,8 @@
 #ifndef FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_LEVEL1MAGESPELL_HPP
 #define FINAL_PROJECT_ICAST065_CAREL009_SSMIT129_JMUNI017_LEVEL1MAGESPELL_HPP
 
+#include "PlayerSpells.hpp"
+#include "Spells.hpp"
 #include "MageSpells.hpp"
 #include "character.hpp"
 #include <string>

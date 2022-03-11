@@ -5,8 +5,6 @@
 #include <string>
 #include <vector>
 #include "character.hpp"
-#include "spells/Spells.hpp"
-#include "spells/PlayerSpells.hpp"
 
 
 class Player : public Character {
@@ -22,7 +20,6 @@ class Player : public Character {
         int speed;
         string pClass;
         string alignment;
-        vector<Spells*> playerSpell;
     public:
         Player() { };
         virtual void setName(string n){name = n;}

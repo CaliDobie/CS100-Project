@@ -10,6 +10,10 @@ using namespace std;
 #include "npc.hpp"
 #include "foe.hpp"
 #include "ally.hpp"
+#include "spells/Spells.hpp"
+#include "spells/MageSpells.hpp"
+#include "spells/Level1MageSpell.hpp"
+#include "spells/SpellManager.hpp"
 #include <vector>
 
 int main()
@@ -27,6 +31,8 @@ int main()
     int speed;
     string uClass;
     string alignment;
+    SpellManager* playerSpells = new SpellManager;
+    Spells* initialPlayerSpell;
 
     /*foe*/
     string fname;
@@ -75,6 +81,7 @@ int main()
             speed = 50;
             uClass = "Mage";
             alignment = "Magic";
+            initialPlayerSpell = new Level1MageSpell;
             break;
         case 2:
             /*warrior*/
@@ -110,6 +117,7 @@ int main()
     user->setSpeed(speed);
     user->setClass(uClass);
     user->setAlignment(alignment);
+    playerSpells->addSpell(initialPlayerSpell);
 
     cout << endl;
 
@@ -125,7 +133,7 @@ int main()
 
    // cout << "COMBAT TUTORIAL!!!!" << endl;
 
-  //  Scene* combatScene = new Combat(user, 2);
+  //  Scene* combatScene = new Combat(user, playerSpells, 2);
   //  combatScene->SetUpScene();
 
     Character* ally_npc = new Ally;
@@ -142,6 +150,7 @@ int main()
             aphysicalDefense = 100;
             amagicDefense = 0;
             aspeed = 25;
+
             break;
         case 2:
             /*warrior ally*/
@@ -397,7 +406,7 @@ int main()
     participants.push_back(foe_4_npc);
     participants.push_back(foe_5_npc);
 
-    Scene* testCombat = new Combat(participants, user);
+    Scene* testCombat = new Combat(participants, user, playerSpells);
     testCombat->SetUpScene();
     /*foe stat check*/
     /*
