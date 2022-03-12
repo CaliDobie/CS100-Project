@@ -11,7 +11,7 @@
 #include <algorithm>
 #include "../Encounter.hpp"
 #include "../../../character.hpp"
-#include "../../npc.hpp"
+#include "../../../npc.hpp"
 
 using namespace std;
 
