@@ -1,8 +1,8 @@
 #ifndef _STRENGTH_POTION_H
 #define _STRENGTH_POTION_H
 #include "consumables.h"
-#include "Character.h"
-#include "Player.h"
+#include "character.hpp"
+#include "player.hpp"
 #include <string>
 #include <vector>
 

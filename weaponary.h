@@ -2,8 +2,8 @@
 #define _WEAPONARY_H_
 
 #include "items.h"
-#include "Character.h"
-#include "Player.h"
+#include "character.hpp"
+#include "player.hpp"
 #include <string>
 #include <vector>
 

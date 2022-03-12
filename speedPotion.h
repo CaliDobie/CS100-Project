@@ -1,8 +1,8 @@
 #ifndef _SPEED_POTION_H_
 #define _SPEED_POTION_H_
 #include "consumables.h"
-#include "Character.h"
-#include "Player.h"
+#include "character.hpp"
+#include "player.hpp"
 #include <string>
 #include <vector>
 

@@ -1,7 +1,7 @@
 #ifndef _MAGIC_STAFF_H_
 #define _MAGIC_STAFF_H_
 #include "weaponary.h"
-#include "Player.h"
+#include "player.hpp"
 #include <string>
 #include <vector>
 

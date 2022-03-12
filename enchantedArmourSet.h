@@ -1,8 +1,8 @@
 #ifndef _ENCHANTED_ARMOUR_SET_H_
 #define _ENCHANTED_ARMOUR_SET_H_
 #include "weaponary.h"
-#include "Character.h"
-#include "Player.h"
+#include "character.hpp"
+#include "player.hpp"
 #include <string>
 #include <vector>
 

@@ -1,8 +1,8 @@
 #ifndef _SWORD_H_
 #define _SWORD_H_
 #include "weaponary.h"
-#include "Character.h"
-#include "Player.h"
+#include "character.hpp"
+#include "player.hpp"
 #include "weaponary.h"
 #include <string>
 #include <vector>
