@@ -417,7 +417,7 @@ int main()
     foe_10_npc->setMagicDefense(fmagicDefense);
     foe_10_npc->setSpeed(fspeed);
 
-    vector<Character*> participants;
+ /*   vector<Character*> participants;
     participants.push_back(foe_1_npc);
     participants.push_back(foe_2_npc);
     participants.push_back(foe_3_npc);
