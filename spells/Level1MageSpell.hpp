@@ -8,7 +8,7 @@
 #include "PlayerSpells.hpp"
 #include "Spells.hpp"
 #include "MageSpells.hpp"
-#include "character.hpp"
+#include "../character.hpp"
 #include <string>
 
 class Level1MageSpell : public MageSpells {

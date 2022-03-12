@@ -7,7 +7,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include "Combat.hpp"
-#include "../../foe.hpp"
+#include "../../../foe.hpp"
 #include <algorithm>
 #include "../Encounter.hpp"
 #include "../../../character.hpp"
