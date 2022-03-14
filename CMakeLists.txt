@@ -52,19 +52,19 @@ add_executable(Challenge_of_the_Idol_Frog
         spells/MageSpells.cpp
         spells/Level1MageSpell.cpp
         spells/SpellManager.cpp
-        UnitTests.cpp)
+        main.cpp)
 
 add_executable(unit_tests
         scenes/Encounter/Combat/Combat.cpp
         scenes/Encounter/Encounter.cpp
         scenes/Scene.cpp
         foe.cpp
-        main.cpp
         spells/PlayerSpells.cpp
         spells/MageSpells.cpp
         spells/Level1MageSpell.cpp
-        spells/SpellManager.cpp)
+        spells/SpellManager.cpp
+        UnitTests.cpp)
 
 target_link_libraries(final_project_icast065_carel009_ssmit129_jmuni017 ${CURSES_LIBRARIES})
-TARGET_LINK_LIBRARIES(final_project_icast065_carel009_ssmit129_jmuni017 gtest)
-TARGET_COMPILE_DEFINITIONS(final_project_icast065_carel009_ssmit129_jmuni017 PRIVATE gtest_disable_pthreads=ON)
+TARGET_LINK_LIBRARIES(unit_tests gtest)
+TARGET_COMPILE_DEFINITIONS(unit_tests PRIVATE gtest_disable_pthreads=ON)
