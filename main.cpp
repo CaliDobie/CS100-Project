@@ -88,9 +88,21 @@ int main()
 
     cout << endl;
 
-    cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
+    //cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
+    //int choice;
+    //cin >> choice;
+    
+    bool choice_exit = false;
     int choice;
-    cin >> choice;
+    
+    while(!choice_exit)
+    {
+        cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
+        cin >> choice;
+        if((choice ==1)||(choice==2)||(choice==3)) {choice_exit = true;}
+        else {choice_exit = false;}
+    }
+    
     switch(choice)
     {
         case 1:
