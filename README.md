@@ -114,6 +114,55 @@ Composite - This design pattern seems to be the best option when dealing with ch
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
+ 
+ There are two ways to Install this program. As of now Linux or MacOs are the only operating systems that are compatible.
+Note: For both methods you need cmake. To install use:
+
+```sh
+brew install cmake
+```
+You must do this prior to installing the program.
+
+##Option 1: Using Git
+
+1. Open a terminal window on your system
+2. Use `cd [preferable director]` to go to where you want to install it.
+3. Type in the following command
+
+```sh
+Git Clone https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017.git
+```
+
+4. Then type in the next command
+
+```sh
+cmake CMakeListsts.txt
+```
+
+5. Then run the code with the following command
+
+```sh
+./Challenge_of_The_Idol_Frog
+```
+
+Or you can double click the file "Challenge_of_The_Idol_Frog" in your install directory.
+
+
+##Option 2: Download release files
+1. Download the zip in the release file
+2. Extract your prefered directory and run the following commands
+
+```sh
+cmake CMakeListsts.txt
+./Challenge_of_The_Idol_Frog
+```
+
+Or just double click "Challenge_of_The_Idol_Frog"
+
+
+
+
+
  ## Testing
  Character Creation Testing: Testing for character creation has been done by creating characters in terminal and checking for correct stat values, names, etc.
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
