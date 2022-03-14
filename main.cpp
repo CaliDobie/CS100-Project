@@ -93,19 +93,19 @@ int main()
     //cin >> choice;
     
     bool choice_exit = false;
-    int choice;
+    char choice;
     
     while(!choice_exit)
     {
         cout << "Select your class - (1)Mage, (2)Warrior, (3)Knight: ";
         cin >> choice;
-        if((choice ==1)||(choice==2)||(choice==3)) {choice_exit = true;}
+        if((choice == '1')||(choice == '2')||(choice == '3')) {choice_exit = true;}
         else {choice_exit = false;}
     }
     
     switch(choice)
     {
-        case 1:
+        case '1':
             /*mage*/
             health = 100;
             EP = 50;
@@ -118,7 +118,7 @@ int main()
             alignment = "Magic";
             initialPlayerSpell = new Level1MageSpell;
             break;
-        case 2:
+        case '2':
             /*warrior*/
             health = 100;
             EP = 50;
@@ -131,7 +131,7 @@ int main()
             alignment = "Strength";
             initialPlayerSpell = new Level1WarriorSpell;
             break;
-        case 3:
+        case '3':
             /*knight*/
             health = 100;
             EP = 50;
@@ -177,7 +177,7 @@ int main()
 
     switch(choice)
     {
-        case 1:
+        case '1':
             /*mage ally*/
             aname = "Warrior(Ally)";
             ahealth = 100;
@@ -188,7 +188,7 @@ int main()
             amagicDefense = 0;
             aspeed = 25;
             break;
-        case 2:
+        case '2':
             /*warrior ally*/
             aname = "Mage(Ally)";
             ahealth = 100;
@@ -199,7 +199,7 @@ int main()
             amagicDefense = 100;
             aspeed = 50;
             break;
-        case 3:
+        case '3':
             /*knight ally*/
             aname = "Knight(Ally)";
             ahealth = 100;
