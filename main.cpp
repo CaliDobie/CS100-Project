@@ -25,6 +25,10 @@
 #include "spells/Spells.hpp"
 #include "spells/MageSpells.hpp"
 #include "spells/Level1MageSpell.hpp"
+#include "spells/WarriorSpells.hpp"
+#include "spells/Level1WarriorSpell.hpp"
+#include "spells/KnightSpells.hpp"
+#include "spells/Level1KnightSpells.hpp"
 #include "spells/SpellManager.hpp"
 #include <cmath>
 #include <vector>
@@ -112,7 +116,8 @@ int main()
             magicDefense = 0;
             speed = 25;
             uClass = "Warrior";
-            alignment = "Strength";            
+            alignment = "Strength";
+            initialPlayerSpell = new Level1WarriorSpell;
             break;
         case 3:
             /*knight*/
@@ -124,7 +129,8 @@ int main()
             magicDefense = 50;
             speed = 38;
             uClass = "Knight";
-            alignment = "Balanced";            
+            alignment = "Balanced";
+            initialPlayerSpell = new Level1KnightSpells;
             break;
     }
     user->setHealth(health);
