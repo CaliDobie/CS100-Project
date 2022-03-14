@@ -33,6 +33,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <fstream>
 using namespace std;
 
 int main()
@@ -537,10 +538,21 @@ int main()
 	bool exit = false;
 
 	//Clear Screen
-	system("cls");
+	
 	
 	//Game 
-	
+	string line;
+	ifstream intro ("intro.txt");
+	if(intro.is_open()){
+		while(getline(intro,line)){
+			cout << line << '\n';
+		}
+		intro.close();
+	}
+
+	else cout << "Unable to open file";
+
+	cout << endl << endl;
 	cout << "Welcome to the city of Coruvon, Champion" << endl << endl;
 	cout << "I can see what you seek in your heart..." << endl;
 	cout << "Just up ahead is an inn where you might find some information" << endl;
@@ -554,7 +566,7 @@ int main()
 
 	cin.clear();
 	input = 0;
-	system("cls");
+	//system("cls");
 	exit = false;
 	
 	  srand (time(NULL));
@@ -573,9 +585,7 @@ int main()
 	cout << "With the end of trade along the Ironflow, the city is slowly shrinking as merchants leave\n";
 	cout <<	"for better markets. Most people coming to the city are either the garrison troops, fishers\n";
 	cout <<	"bringing their harvests, and adventurers and would-be adventurers using Coruvon as a final\n";
-	cout <<	"launching point for their explorations of the Black Mire or the dwarven ruins.";
-
-	system("cls");
+	cout <<	"launching point for their explorations of the Black Mire or the dwarven ruins.\n\n\n";
 	
 
         while(!exit){
@@ -587,7 +597,7 @@ int main()
 	
         cin.clear();
         input = 0;
-        system("cls");
+       // system("cls");
 	exit = false;
 
 	cout << "You leave the inn and approach a road, which forks right or left\n";
@@ -602,7 +612,7 @@ int main()
 
         cin.clear();
         input = 0;
-        system("cls");
+       	//clear screen
         exit = false;
 
 	vector<Character*> fight1;
@@ -631,7 +641,7 @@ int main()
 
 	cin.clear();
         input = 0;
-        system("cls");
+        //system("cls");
         exit = false;
 
 	cout << "You come across a strange statue...it seems to speak to you, but not in words,\n";
@@ -647,7 +657,7 @@ int main()
 
 	cin.clear();
         input = 0;
-        system("cls");
+        //system("cls");
         exit = false;
 
 	cout << "Well that was strange...Let's get out of here and see if that old frog has any truth in him\n";
@@ -664,7 +674,7 @@ int main()
 	char choice2 = input;
         cin.clear();
         input = 0;
-        system("cls");
+        //system("cls");
         exit = false;
 
 	int trial1 = 0;
@@ -711,7 +721,7 @@ int main()
 
 	//get itemEnd
 
-	system("cls");
+	//system("cls");
 	cout << "Goodbye " << user->getName() << "\n";
 	return 0;
 }

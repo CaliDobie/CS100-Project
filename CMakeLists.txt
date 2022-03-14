@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.21)
+cmake_minimum_required(VERSION 3.17)
 project(final_project_icast065_carel009_ssmit129_jmuni017)
 
 set(CMAKE_CXX_STANDARD 14)
