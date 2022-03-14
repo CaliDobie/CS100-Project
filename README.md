@@ -133,10 +133,11 @@ You must do this prior to installing the program.
 Git Clone https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017.git
 ```
 
-4. Then type in the next command
+4. Then type in the next 2 commands
 
 ```sh
 cmake CMakeListsts.txt
+make
 ```
 
 5. Then run the code with the following command
@@ -154,6 +155,7 @@ Or you can double click the file "Challenge_of_The_Idol_Frog" in your install di
 
 ```sh
 cmake CMakeListsts.txt
+make
 ./Challenge_of_The_Idol_Frog
 ```
 
