@@ -21,7 +21,7 @@ add_executable(final_project_icast065_carel009_ssmit129_jmuni017
         foe.cpp
         foe.hpp
         main.cpp
-        player.hpp spells/PlayerSpells.cpp spells/PlayerSpells.hpp spells/MageSpells.cpp spells/MageSpells.hpp spells/Spells.cpp spells/Spells.hpp spells/Level1MageSpell.cpp spells/Level1MageSpell.hpp spells/SpellManager.cpp spells/SpellManager.hpp)
+        player.hpp spells/PlayerSpells.cpp spells/PlayerSpells.hpp spells/MageSpells.cpp spells/MageSpells.hpp spells/Spells.cpp spells/Spells.hpp spells/Level1MageSpell.cpp spells/Level1MageSpell.hpp spells/SpellManager.cpp spells/SpellManager.hpp spells/WarriorSpells.cpp spells/WarriorSpells.hpp spells/Level1WarriorSpell.cpp spells/Level1WarriorSpell.hpp spells/KnightSpells.cpp spells/KnightSpells.hpp spells/Level1KnightSpells.cpp spells/Level1KnightSpells.hpp)
 
 add_executable(Challenge_of_the_Idol_Frog
         scenes/Encounter/Combat/Combat.cpp
