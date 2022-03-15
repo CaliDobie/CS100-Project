@@ -1,3 +1,9 @@
 *.out
 .idea/
 cmake-build-debug/
+CMakeFiles/
+Challenge_of_The_Idol_Frog
+Makefile
+*.cmake
+lib/
+CMakeCache.txt
