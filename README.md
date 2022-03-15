@@ -110,7 +110,8 @@ Composite - This design pattern seems to be the best option when dealing with ch
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
- ![screenshot1](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/Player_Character_Creation_and_Class_Selection_and_Ally_Creation.png)
+ ![screenshot1](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/Game1.png)
+ ![screenshot2](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/Game2.png)
  > Screenshots of the input/output after running your application
  ## Installation/Usage
  > Instructions on installing and running your application
@@ -166,8 +167,11 @@ Or just double click "Challenge_of_The_Idol_Frog"
 
 
  ## Testing
- Character Creation Testing: Testing for character creation has been done by creating characters in terminal and checking for correct stat values, names, etc.
+ Character Creation Testing: Testing for character creation has been done by creating unit tests on gtest.
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
+ ![character_creation_tests](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/character_creation_tests.png)
  ![testscreenshot1](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/GTests.PNG)
+ ![testScreenshot2](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/GTest2.png)
+ ![valgrind](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/valgrind.png)
  
