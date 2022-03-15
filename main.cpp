@@ -606,7 +606,7 @@ int main()
 	bool rumor_true = false;
 	if(rumor <= 10){rumor_true = true;}
 
-	cout << "The innkeeper tells you that..." << "ouroboros is in Crossbell." << endl;
+	cout << "The innkeeper tells you that..." << "there is an ironflow in the east." << endl;
     //rumomrs[rumor] << endl;
 	cout << "He also tells you that, built on the ironflow, Coruvon started as a small military outpost\n";
 	cout <<	"built on a hilltop just east of the massive expansive of swamp known as the Black Mire.\n";
