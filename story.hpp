@@ -15,13 +15,14 @@ private:
 
 public:
 
-    story() {};
+    story() {rumor = 0; trial1 = false; trial2 = false; trial3 = false; };
 
-    virtual int get_rumor() = 0;
-    virtual bool get_trial1() = 0;
-    virtual bool get_trial() = 0 ;
-    virtual void set_trial(bool pass, int number ) = 0;
-    virtual void set_rumor(int inout) = 0;
+    int get_rumor();
+    bool get_trial1();
+    bool get_trial2();
+    bool get_trial3();
+    void set_trial(bool pass, int number );
+    void set_rumor(int input);
     
 };
 #endif

@@ -38,25 +38,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <fstream>
+#include <story.cpp>
 using namespace std;
 
 int main()
 {
-
-    /*
-     How to use combat system
-     vector<Character*> participants;
-    participants.push_back(foe_1_npc);
-    participants.push_back(foe_2_npc);
-    participants.push_back(foe_3_npc);
-    participants.push_back(foe_4_npc);
-    participants.push_back(foe_5_npc);
-
-    Scene* testCombat = new Combat(participants, user, playerSpells); <-- use this constructor
-    testCombat->SetUpScene(); <-- use this start combat scene
-     */
-
-    /*user*/
 
     string name;
     int health;
@@ -72,6 +58,7 @@ int main()
     Spells* initialPlayerSpell;
 
     /*foe*/
+
     string fname;
     int fhealth;
     int fEP;
@@ -448,16 +435,6 @@ int main()
     foe_10_npc->setPhysicalDefense(fphysicalDefense);
     foe_10_npc->setMagicDefense(fmagicDefense);
     foe_10_npc->setSpeed(fspeed);
-
- /*   vector<Character*> participants;
-    participants.push_back(foe_1_npc);
-    participants.push_back(foe_2_npc);
-    participants.push_back(foe_3_npc);
-    participants.push_back(foe_4_npc);
-    participants.push_back(foe_5_npc);
-
-    Scene* testCombat = new Combat(participants, user, playerSpells);
-    testCombat->SetUpScene();
     /*foe stat check*/
     /*
     cout << endl << endl << endl;
@@ -567,6 +544,7 @@ int main()
 	//Variables for game maintenance & operation
 	char input;
 	bool exit = false;
+	story* curr_game = new story();
 
 	//Clear Screen
 	
@@ -601,12 +579,12 @@ int main()
 	exit = false;
 	
 	  srand (time(NULL));
-
-	int rumor = rand() % 11 + 1;
 	bool rumor_true = false;
+	int rumor = rand() % 11 + 1;
+	curr_game->set_rumor(rumor);
 	if(rumor <= 10){rumor_true = true;}
 
-	cout << "The innkeeper tells you that..." << "there is an ironflow in the east." << endl;
+	cout << "The innkeeper tells you that" << " there is an ironflow in the east." << endl;
     //rumomrs[rumor] << endl;
 	cout << "He also tells you that, built on the ironflow, Coruvon started as a small military outpost\n";
 	cout <<	"built on a hilltop just east of the massive expansive of swamp known as the Black Mire.\n";
@@ -646,8 +624,10 @@ int main()
        	//clear screen
         exit = false;
 
-	vector<Character*> fight1;
-	fight1.push_back(foe_1_npc);
+    vector<Character*> fight1;
+    fight1.push_back(foe_1_npc);
+    Scene* fight1_combat  = new Combat(fight1, user, playerSpells);
+    fight1_combat->SetUpScene();
 	if(choice1 == 'r'){ 
 		cout <<"Crocodiles Appear From the Mire! Ready yourself!" << endl;
 		Scene* testCombat3  = new Combat(fight1, user, playerSpells);
@@ -656,8 +636,8 @@ int main()
 	else{ cout << "A Giant Catfish leaps from the water! AHH!" <<endl;
         vector<Character*> fight2;
         fight2.push_back(foe_2_npc);
-		Scene* testCombat2 = new Combat(fight2, user, playerSpells);
-		testCombat2->SetUpScene();
+		Scene* fight_Combat2 = new Combat(fight2, user, playerSpells);
+		fight_Combat2->SetUpScene();
  	 }
 	
 	cout << "That was close... let's move on down the road" << endl;
@@ -666,8 +646,8 @@ int main()
 
 	if(!rumor_true){
 		cout <<"Up ahead you see a group of troglodytes, get ready to fight!"<<endl;
-		Scene* testCombat4 = new Combat(fight3, user, playerSpells);
-		testCombat4->SetUpScene();
+		Scene* fight_combat3 = new Combat(fight3, user, playerSpells);
+		fight_combat3->SetUpScene();
 	}
 
 	cin.clear();
@@ -718,7 +698,8 @@ int main()
 		cout <<	"A shriek lets out from the distance\n";
 		Scene* testCombat4 = new Combat(fight4,user,playerSpells);
 		testCombat4->SetUpScene();
-		//get trial1
+	        curr_game->set_trial(true,1);
+		
 	}
 	else if(choice2 == 2){
 		cout << "The water becomes deeper\n";
@@ -730,7 +711,7 @@ int main()
         fight5.push_back(foe_5_npc);
         Scene* testCombat5 =  new Combat(fight5, user, playerSpells);
         testCombat5->SetUpScene();
-		//get trial2
+		curr_game->set_trial(true,2);
 		}
 	else{
 		cout << "The rain pours down relentlessly\n";
@@ -742,7 +723,7 @@ int main()
         fight6.push_back(foe_6_npc);
         Scene* testCombat4 = new Combat(fight4,user,playerSpells);
         testCombat4->SetUpScene();
-		//get trial3
+		curr_game->set_trial(true,3);
 		}
 
 	cout << "You carry on, weary and damaged, but determined in your voyage" << endl;
