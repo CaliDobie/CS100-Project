@@ -144,8 +144,8 @@ void Combat::CurrentCombat() {
 
         } else if (combatState == 1) {
             cout << "Enemy Health " << turnOrder.at(foeNum)->getName() << ":" << turnOrder.at(foeNum)->getHealth() << endl;
-            cout << "1. Attack 2. Spell 3. "
-                    "Switch 4. Guard Any Key: Pass Turn" << endl;
+            cout << "1. Attack || 2. Spell || 3. "
+                    " Guard || Any Key: Pass Turn" << endl;
             cin >> decision;
             cin.clear();
             if(decision == '1') {
