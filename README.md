@@ -169,3 +169,5 @@ Or just double click "Challenge_of_The_Idol_Frog"
  Character Creation Testing: Testing for character creation has been done by creating characters in terminal and checking for correct stat values, names, etc.
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
+ ![testscreenshot1](https://github.com/cs100/final-project-icast065-carel009-ssmit129-jmuni017/blob/master/Screenshots/GTests.PNG)
+ 
