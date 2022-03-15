@@ -144,8 +144,8 @@ void Combat::CurrentCombat() {
 
         } else if (combatState == 1) {
             cout << "Enemy Health " << turnOrder.at(foeNum)->getName() << ":" << turnOrder.at(foeNum)->getHealth() << endl;
-            cout << "1. Attack 2. Spell 3. "
-                    "Switch 4. Guard Any Key: Pass Turn" << endl;
+            cout << "1. Attack || 2. Spell || 3. "
+                    "Guard || Any Key: Pass Turn" << endl;
             cin >> decision;
             cin.clear();
             if(decision == '1') {
@@ -182,10 +182,6 @@ void Combat::CurrentCombat() {
                 combatState = 0;
             }
             else if (decision == '3') {
-                cout << "To be implemented" << endl;
-                combatState = 0;
-            }
-            else if (decision == '4') {
                 prevDefense = player->getPhysicalDefense();
                 player->setPhysicalDefense(prevDefense += 10);
                 isGaurd = true;
